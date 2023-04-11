@@ -1,0 +1,27 @@
+---
+image: foto.jfif
+about: 
+  template: trestles
+  image-shape: rounded
+  image-width: 15em
+  links:
+    - text: LinkedIn
+      icon: linkedin
+      href: https://www.linkedin.com/in/harold-llauca/
+    - text: GitHub
+      icon: github
+      href: https://github.com/hllauca
+    - text: Email
+      icon: envelope
+      href: mailto:hllauca@gmail.com
+---
+
+## !Bienvenido!
+
+Soy un profesional con experiencia en el análisis y modelación de procesos del ciclo hidrológico, desarrollo de pronóstico de caudales a corto y largo plazo, y desarrollo de estudios de variabilidad climática y efectos del cambio climático en la hidrología de cuencas. Tengo especial interés por el desarrollo de ciencia aplicada a servicios que conlleven al establecimiento de políticas robustas para la mitigación de peligros hidrológicos extremos como sequías e inundaciones.
+
+Gracias por visitar mi página...
+
+**Harold Llauca**
+
+Hidrología & Recursos Hídricos

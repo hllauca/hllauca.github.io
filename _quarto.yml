@@ -1,0 +1,30 @@
+project:
+  type: website
+
+website:
+  title: "Harold Llauca"
+  favicon: rocket-takeoff-fill.svg
+  navbar:
+    left:
+      - href: index.qmd
+        text: Acerca de mi...
+      - href: about.qmd
+        text: Perfil
+      - href: publications.qmd
+        text: Publicaciones
+      - href: resources.qmd
+        text: Recursos
+      - href: CV_Harold_Llauca.pdf
+        text: Curriculum Vitae
+    page-footer: "Copyright 2023, Harold Llauca"
+
+format:
+  html:
+    theme:
+      light: yeti
+      dark: slate
+    css: styles.css
+    toc: true
+
+editor: visual
+

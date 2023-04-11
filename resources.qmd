@@ -1,0 +1,25 @@
+# Productos
+
+-   El producto [PISCO_HyM_GR2M](https://figshare.com/articles/dataset/PISCO_HyM_GR2M_v1_1/14382758) es un conjunto de datos de caudales medios mensuales en todo el territorio peruano, simulados mediante el modelo GR2M. Este producto contiene series de tiempo de caudales mensuales desde enero 1981 a Marzo 2020.
+
+-   El producto [PISCO_HyD_ARNOVIC](https://www.hydroshare.org/resource/f723d6c762ca45b6936dd9489bc44842/) es un conjunto de datos de caudales medios diarios en todo el territorio peruano, simulados mediante el modelo ARNOVIC. Este producto contiene series de tiempo de caudales diarios desde el 01-01-1981 al 31-12-2022.
+
+-   El producto [SONICS](https://harold-llauca.shinyapps.io/sonics/) ha sido desarrollado para monitorear y preveer inundaciones fluviales en el territorio peruano. Este sistema proporciona actualizaciones contínuas del estado actual en 12 mil tramos de río a nivel nacional, y pronósticos a un horizonte de 7 días.
+
+![](/sonics.PNG){fig-align="center" width="1000"}
+
+[*Vista del producto SONICS*]{.smallcaps}
+
+# R packages
+
+-   [RClimChange](https://github.com/hllauca/RClimChange) es un paquete desarrollado para la descarga y recorte de datos de Modelos Climáticos Globales (GCM, por sus siglas en inglés) del Sexto (CMIP6). Los datos son extraidos del *NASA Earth Exchange Global Daily Downscaled Projections* (NEX-GDDP, <https://www.nccs.nasa.gov/services/data-collections/land-based-products/nex-gddp-cmip6>).
+
+    `devtools::install_github("hllauca/RClimChange")`
+
+    `library(RClimChange)`
+
+-   [GR2MSemiDistr](https://github.com/hllauca/GR2MSemiDistr) es un paquete desarrollado para la calibración y ejecución del modelo conceptual GR2M a nivel semi-distribuido (por subcuencas) en grandes dominios de estudio. Este paquete procesa a nivel de subcuencas los datos del producto PISCO, identifica los parámetros óptimos mediante el algoritmo *Shufflex Complex Evolutionary* (SCE), y rutea los caudales mensuales a la salida de cada subcuenca mediante el algoritmo de Acumulación Ponderada del Flujo (WFAC).
+
+    `devtools::install_github("hllauca/GR2MSemiDistr")`
+
+    `library(GR2MSemiDistr)`
