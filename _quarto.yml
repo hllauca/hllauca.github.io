@@ -20,9 +20,7 @@ website:
 
 format:
   html:
-    theme:
-      light: yeti
-      dark: slate
+    theme: yeti
     css: styles.css
     toc: true
 
