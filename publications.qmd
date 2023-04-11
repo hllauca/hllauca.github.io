@@ -1,4 +1,4 @@
-# Artículos científicos
+# Articles
 
 -   <div>
 
@@ -24,7 +24,7 @@
 
     </div>
 
-# Resúmenes en congresos
+# Conference presentations
 
 -   <div>
 

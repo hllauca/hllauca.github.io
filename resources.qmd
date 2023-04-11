@@ -1,24 +1,24 @@
-# Productos
+# Development products
 
--   El producto [PISCO_HyM_GR2M](https://figshare.com/articles/dataset/PISCO_HyM_GR2M_v1_1/14382758) es un conjunto de datos de caudales medios mensuales en todo el territorio peruano, simulados mediante el modelo GR2M. Este producto contiene series de tiempo de caudales mensuales desde enero 1981 a Marzo 2020.
+-   The [PISCO_HyM_GR2M](https://figshare.com/articles/dataset/PISCO_HyM_GR2M_v1_1/14382758) product is a data set of monthly flows throughout the Peruvian territory, simulated using the GR2M model. It contains time series of mean monthly flows from January 1981 to March 2020.
 
--   El producto [PISCO_HyD_ARNOVIC](https://www.hydroshare.org/resource/f723d6c762ca45b6936dd9489bc44842/) es un conjunto de datos de caudales medios diarios en todo el territorio peruano, simulados mediante el modelo ARNOVIC. Este producto contiene series de tiempo de caudales diarios desde el 01-01-1981 al 31-12-2022.
+-   The [PISCO_HyD_ARNOVIC](#0) product is a data set of daily flows throughout the Peruvian territory, simulated using the ARNOVIC model. This product contains time series of mean daily flows from 1981-01-01 to 2022-12-31.
 
--   El producto [SONICS](https://harold-llauca.shinyapps.io/sonics/) ha sido desarrollado para monitorear y preveer inundaciones fluviales en el territorio peruano. Este sistema proporciona actualizaciones contínuas del estado actual en 12 mil tramos de río a nivel nacional, y pronósticos a un horizonte de 7 días.
+-   The [SONICS](#0) product has been developed for monitoring and forecasting fluvial floods in Peru. This system provides continuous updates on the current state of 12,000 river reaches nationwide, and forecasts for a 7-day horizon.
 
 ![](/sonics.PNG){fig-align="center" width="1000"}
 
-[*Vista del producto SONICS*]{.smallcaps}
+[*The sonics' dashboard*]{.smallcaps}
 
 # R packages
 
--   [RClimChange](https://github.com/hllauca/RClimChange) es un paquete desarrollado para la descarga y recorte de datos de Modelos Climáticos Globales (GCM, por sus siglas en inglés) del Sexto (CMIP6). Los datos son extraidos del *NASA Earth Exchange Global Daily Downscaled Projections* (NEX-GDDP, <https://www.nccs.nasa.gov/services/data-collections/land-based-products/nex-gddp-cmip6>).
+-   [RClimChange](https://github.com/hllauca/RClimChange) is a package developed for downloading and subsetting data from Global Climate Models (GCM) of the Coupled Model Intercomparison Project phase 6 (CMIP6). The data is extracted from *NASA Earth Exchange Global Daily Downscaled Projections* (NEX-GDDP, <https://www.nccs.nasa.gov/services/data-collections/land-based-products/nex-gddp-cmip6>).
 
     `devtools::install_github("hllauca/RClimChange")`
 
     `library(RClimChange)`
 
--   [GR2MSemiDistr](https://github.com/hllauca/GR2MSemiDistr) es un paquete desarrollado para la calibración y ejecución del modelo conceptual GR2M a nivel semi-distribuido (por subcuencas) en grandes dominios de estudio. Este paquete procesa a nivel de subcuencas los datos del producto PISCO, identifica los parámetros óptimos mediante el algoritmo *Shufflex Complex Evolutionary* (SCE), y rutea los caudales mensuales a la salida de cada subcuenca mediante el algoritmo de Acumulación Ponderada del Flujo (WFAC).
+-   [GR2MSemiDistr](https://github.com/hllauca/GR2MSemiDistr) is a package for the execution of the GR2M conceptual model at a semi-distributed level (by sub-basins) in large domains. This package processes the PISCO forcing data at the sub-basin level, identifies the optimal set of model parameters using the Shuffle Complex Evolutionary (SCE) algorithm, and routes monthly flows to the outlet of each sub-basin using the Weighted Flow Accumulation (WFAC) algorithm.
 
     `devtools::install_github("hllauca/GR2MSemiDistr")`
 

@@ -8,20 +8,20 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Acerca de mi...
+        text: Home
       - href: about.qmd
-        text: Perfil
+        text: Profile
       - href: publications.qmd
-        text: Publicaciones
+        text: Publications
       - href: resources.qmd
-        text: Recursos
+        text: Resources
       - href: CV_Harold_Llauca.pdf
-        text: Curriculum Vitae
+        text: CV
     page-footer: "Copyright 2023, Harold Llauca"
 
 format:
   html:
-    theme: yeti
+    theme: spacelab
     css: styles.css
     toc: true
 

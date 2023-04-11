@@ -1,31 +1,29 @@
-# Educación
+# Education
 
--   **MSc. en Recursos y Medio Ambiente Hídricos** \| Universidad de Chile \| Facultad de Ciencias Físicas y Matemáticas \| Departamento de Ingeniería Civil. 2018.
+-   **MSc. in Water and Environmental Resources** \| University of Chile \| Faculty of Physics and Mathematics Sciences \| Department of Civil Engineering. 2018.
 
--   **Ing. Agrícola** \| Universidad Nacional Agraria La Molina \| Facultad de Ingeniería Agrícola. 2014.
+-   **Agricultural Engineer** \| National Agrarian University La Molina \| Faculty of Agricultural Engineering. 2014.
 
-# Experiencia
+# Work history
 
--   **Especialista en Hidrología (2019-actualidad)** \| Servicio Nacional de Meteorología e Hidrología del Perú (SENAMHI).
+-   **Researcher in hydrology (2019-present)** \| National Service of Meteorology and Hydrology of Peru (SENAMHI).
 
--   **Asistente de investigación en Hidrología de Nieves (2016-2018)** \| Departamento de Ingeniería Civil de la Universidad de Chile.
+-   **Research assistant in Snow Hydrology (2016-2018)** \| Department of Civil Engineering. University of Chile.
 
--   **Consultor en hidrología (2014-2015)** \| Servicio Nacional de Meteorología e Hidrología del Perú (SENAMHI).
+-   **Hydrologist (2014-2015)** \| National Service of Meteorology and Hydrology of Peru (SENAMHI).
 
--   **Fieldworker en Recursos Hídrico (2013).** Subproyecto de Manejo de Cuencas Hidrográficas del programa VLIR/UOS-UNALM.
+-   **Fieldworker in Water Resources (2013).** VLIR/UOS-UNALM program.
 
-# Áreas de interés
+# Area of interest
 
--   Hidrología de gran escala.
+-   Large-sample hydrology
 
--   Sensoramiento remoto en hidrología.
+-   Hydrological modeling.
 
--   Modelación de procesos hidrológicos.
+-   Floods monitoring.
 
--   Monitoreo y previsión de inundaciones fluviales.
+-   Uncertainties in hydrological forecasting.
 
--   Incertidumbre en modelos de pronóstico hidrológico.
+-   Climate change and water resources.
 
--   Cambio climático en los recursos hídricos.
-
--   Hidroinformática aplicada a servicios climáticos.
+-   Hydroinformatics.

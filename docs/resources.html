@@ -83,23 +83,23 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Acerca de mi…</span></a>
+ <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html" rel="" target="">
- <span class="menu-text">Perfil</span></a>
+ <span class="menu-text">Profile</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./publications.html" rel="" target="">
- <span class="menu-text">Publicaciones</span></a>
+ <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./resources.html" rel="" target="" aria-current="page">
- <span class="menu-text">Recursos</span></a>
+ <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./CV_Harold_Llauca.pdf" rel="" target="">
- <span class="menu-text">Curriculum Vitae</span></a>
+ <span class="menu-text">CV</span></a>
   </li>  
 </ul>
             <div class="quarto-navbar-tools ms-auto">
@@ -117,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#productos" id="toc-productos" class="nav-link active" data-scroll-target="#productos">Productos</a></li>
+  <li><a href="#development-products" id="toc-development-products" class="nav-link active" data-scroll-target="#development-products">Development products</a></li>
   <li><a href="#r-packages" id="toc-r-packages" class="nav-link" data-scroll-target="#r-packages">R packages</a></li>
   </ul>
 </nav>
@@ -127,27 +127,27 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="productos" class="level1">
-<h1>Productos</h1>
+<section id="development-products" class="level1">
+<h1>Development products</h1>
 <ul>
-<li><p>El producto <a href="https://figshare.com/articles/dataset/PISCO_HyM_GR2M_v1_1/14382758">PISCO_HyM_GR2M</a> es un conjunto de datos de caudales medios mensuales en todo el territorio peruano, simulados mediante el modelo GR2M. Este producto contiene series de tiempo de caudales mensuales desde enero 1981 a Marzo 2020.</p></li>
-<li><p>El producto <a href="https://www.hydroshare.org/resource/f723d6c762ca45b6936dd9489bc44842/">PISCO_HyD_ARNOVIC</a> es un conjunto de datos de caudales medios diarios en todo el territorio peruano, simulados mediante el modelo ARNOVIC. Este producto contiene series de tiempo de caudales diarios desde el 01-01-1981 al 31-12-2022.</p></li>
-<li><p>El producto <a href="https://harold-llauca.shinyapps.io/sonics/">SONICS</a> ha sido desarrollado para monitorear y preveer inundaciones fluviales en el territorio peruano. Este sistema proporciona actualizaciones contínuas del estado actual en 12 mil tramos de río a nivel nacional, y pronósticos a un horizonte de 7 días.</p></li>
+<li><p>The <a href="https://figshare.com/articles/dataset/PISCO_HyM_GR2M_v1_1/14382758">PISCO_HyM_GR2M</a> product is a data set of monthly flows throughout the Peruvian territory, simulated using the GR2M model. It contains time series of mean monthly flows from January 1981 to March 2020.</p></li>
+<li><p>The <a href="#0">PISCO_HyD_ARNOVIC</a> product is a data set of daily flows throughout the Peruvian territory, simulated using the ARNOVIC model. This product contains time series of mean daily flows from 1981-01-01 to 2022-12-31.</p></li>
+<li><p>The <a href="#0">SONICS</a> product has been developed for monitoring and forecasting fluvial floods in Peru. This system provides continuous updates on the current state of 12,000 river reaches nationwide, and forecasts for a 7-day horizon.</p></li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src=".\sonics.PNG" class="img-fluid figure-img" width="1000"></p>
 </figure>
 </div>
-<p><span class="smallcaps"><em>Vista del producto SONICS</em></span></p>
+<p><span class="smallcaps"><em>The sonics’ dashboard</em></span></p>
 </section>
 <section id="r-packages" class="level1">
 <h1>R packages</h1>
 <ul>
-<li><p><a href="https://github.com/hllauca/RClimChange">RClimChange</a> es un paquete desarrollado para la descarga y recorte de datos de Modelos Climáticos Globales (GCM, por sus siglas en inglés) del Sexto (CMIP6). Los datos son extraidos del <em>NASA Earth Exchange Global Daily Downscaled Projections</em> (NEX-GDDP, <a href="https://www.nccs.nasa.gov/services/data-collections/land-based-products/nex-gddp-cmip6" class="uri">https://www.nccs.nasa.gov/services/data-collections/land-based-products/nex-gddp-cmip6</a>).</p>
+<li><p><a href="https://github.com/hllauca/RClimChange">RClimChange</a> is a package developed for downloading and subsetting data from Global Climate Models (GCM) of the Coupled Model Intercomparison Project phase 6 (CMIP6). The data is extracted from <em>NASA Earth Exchange Global Daily Downscaled Projections</em> (NEX-GDDP, <a href="https://www.nccs.nasa.gov/services/data-collections/land-based-products/nex-gddp-cmip6" class="uri">https://www.nccs.nasa.gov/services/data-collections/land-based-products/nex-gddp-cmip6</a>).</p>
 <p><code>devtools::install_github("hllauca/RClimChange")</code></p>
 <p><code>library(RClimChange)</code></p></li>
-<li><p><a href="https://github.com/hllauca/GR2MSemiDistr">GR2MSemiDistr</a> es un paquete desarrollado para la calibración y ejecución del modelo conceptual GR2M a nivel semi-distribuido (por subcuencas) en grandes dominios de estudio. Este paquete procesa a nivel de subcuencas los datos del producto PISCO, identifica los parámetros óptimos mediante el algoritmo <em>Shufflex Complex Evolutionary</em> (SCE), y rutea los caudales mensuales a la salida de cada subcuenca mediante el algoritmo de Acumulación Ponderada del Flujo (WFAC).</p>
+<li><p><a href="https://github.com/hllauca/GR2MSemiDistr">GR2MSemiDistr</a> is a package for the execution of the GR2M conceptual model at a semi-distributed level (by sub-basins) in large domains. This package processes the PISCO forcing data at the sub-basin level, identifies the optimal set of model parameters using the Shuffle Complex Evolutionary (SCE) algorithm, and routes monthly flows to the outlet of each sub-basin using the Weighted Flow Accumulation (WFAC) algorithm.</p>
 <p><code>devtools::install_github("hllauca/GR2MSemiDistr")</code></p>
 <p><code>library(GR2MSemiDistr)</code></p></li>
 </ul>

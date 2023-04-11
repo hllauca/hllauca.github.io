@@ -16,12 +16,12 @@ about:
       href: mailto:hllauca@gmail.com
 ---
 
-## !Bienvenido!
+## Welcome!
 
-Soy un profesional con experiencia en el análisis y modelación de procesos del ciclo hidrológico, desarrollo de pronóstico de caudales a corto y largo plazo, y desarrollo de estudios de variabilidad climática y efectos del cambio climático en la hidrología de cuencas. Tengo especial interés por el desarrollo de ciencia aplicada a servicios que conlleven al establecimiento de políticas robustas para la mitigación de peligros hidrológicos extremos como sequías e inundaciones.
+I am a young professional with experience in the analysis and modeling of hydrological processes, development of short- and long-term flow forecasts, climate change studies and their effects on catchment hydrology, and construction of hydrological datasets using satellite remote sensing and informatics develpoments. My recent studies are focused on develop climate services that support policies for the mitigation of extreme hydrological hazards such as droughts and floods in Peru.
 
-Gracias por visitar mi página...
+Thanks for visit my website!
 
 **Harold Llauca**
 
-Hidrología & Recursos Hídricos
+Hydrology & Water Resources
