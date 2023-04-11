@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Harold Llauca",
+    "section": "",
+    "text": "Soy un profesional con experiencia en el análisis y modelación de procesos del ciclo hidrológico, desarrollo de pronóstico de caudales a corto y largo plazo, y desarrollo de estudios de variabilidad climática y efectos del cambio climático en la hidrología de cuencas. Tengo especial interés por el desarrollo de ciencia aplicada a servicios que conlleven al establecimiento de políticas robustas para la mitigación de peligros hidrológicos extremos como sequías e inundaciones.\nGracias por visitar mi página…\nHarold Llauca\nHidrología & Recursos Hídricos"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Educación",
+    "section": "",
+    "text": "Educación\n\nMSc. en Recursos y Medio Ambiente Hídricos | Universidad de Chile | Facultad de Ciencias Físicas y Matemáticas | Departamento de Ingeniería Civil. 2018.\nIng. Agrícola | Universidad Nacional Agraria La Molina | Facultad de Ingeniería Agrícola. 2014.\n\n\n\nExperiencia\n\nEspecialista en Hidrología (2019-actualidad) | Servicio Nacional de Meteorología e Hidrología del Perú (SENAMHI).\nAsistente de investigación en Hidrología de Nieves (2016-2018) | Departamento de Ingeniería Civil de la Universidad de Chile.\nConsultor en hidrología (2014-2015) | Servicio Nacional de Meteorología e Hidrología del Perú (SENAMHI).\nFieldworker en Recursos Hídrico (2013). Subproyecto de Manejo de Cuencas Hidrográficas del programa VLIR/UOS-UNALM.\n\n\n\nÁreas de interés\n\nHidrología de gran escala.\nSensoramiento remoto en hidrología.\nModelación de procesos hidrológicos.\nMonitoreo y previsión de inundaciones fluviales.\nIncertidumbre en modelos de pronóstico hidrológico.\nCambio climático en los recursos hídricos.\nHidroinformática aplicada a servicios climáticos."
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Artículos científicos",
+    "section": "",
+    "text": "Artículos científicos\n\n\n\nLlauca, H., Leon, K, Lavado, W. Construction of a daily streamflow dataset for Peru using a similarity-based regionalization approach and a hybrid modeling framework. Journal of Hydrology: Regional Studies. [Accepted].\n\n\n\n\nSaavedra, D., Mendoza, P. A., Addor, N., Llauca, H., Vargas, X. A multi-objective approach to select hydrological models and constrain structural uncertainties for climate impact assessments. Hydrological Processes. 2021; 36(1), e14446. https://doi.org/10.1002/hyp.14446\n\n\n\n\nLlauca H, Lavado-Casimiro W, Montesinos C, Santini W, Rau P. PISCO HyM GR2M : A Model of Monthly Water Balance in Peru (1981–2020). Water. 2021; 13(8) :1048. https://doi.org/10.3390/w13081048\n\n\n\n\nLlauca H, Lavado-Casimiro W, León K, Jimenez J, Traverso K, Rau P. Assessing Near Real-Time Satellite Precipitation Products for Flood Simulations at Sub-Daily Scales in a Sparsely Gauged Watershed in Peruvian Andes. Remote Sensing. 2021; 13(4) :826. https://doi.org/10.3390/rs13040826\n\n\n\n\n\nResúmenes en congresos\n\n\n\nLlauca, H., Leon, K., Lavado, W., and Felipe, O.: SONICS: A new Peruvian hydrological dataset of simulated daily streamflow for flood monitoring and forecasting, EGU General Assembly 2023, Vienna, Austria, 24–28 Apr 2023, EGU23-8144, https://doi.org/10.5194/egusphere-egu23-8144\n\n\n\n\n\nLlauca, H., Lavado, W., Montesinos, C., and Rau, P.: Monthly semi-distributed hydrological model at national scale in Peru, EGU General Assembly 2020, Online, 4–8 May 2020, EGU2020-3769, https://doi.org/10.5194/egusphere-egu2020-3769\n\n\n\n\n\nLeon, K., Acuña, J., Llauca, H., Lavado, W., Suarez, W., Ordoñez, J., and Felipe, O. : Implementation of a flood forecasting system in a transboundary river basin, Peru – Ecuador , EGU General Assembly 2020, Online, 4–8 May 2020, EGU2020-12927, https://doi.org/10.5194/egusphere-egu2020-12927\n\n\n\n\nAsurza Véliz, F. A., Traverso-Yucra, K. A., Lavado-Casimiro, W. S., Felipe-Obando, O., Montesinos-Cáceres, C. A., and Llauca-Soto, H. O.: Surface water resources assessment in Peru through SWAT hydrological model, EGU General Assembly 2020, Online, 4–8 May 2020, EGU2020-6308, https://doi.org/10.5194/egusphere-egu2020-6308\n\n\n\n\nWaldo, L.-C., Juan Carlos, J., Harold, L., Karen, L., Clara, O., Alan, L., Adrian, H., Oscar, F., Julia, A., Pedro, R., and Jorge, A.: ANDES: The first system for flash flood monitoring and forecasting in Peru, EGU General Assembly 2020, Online, 4–8 May 2020, EGU2020-3759, https://doi.org/10.5194/egusphere-egu2020-3759"
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Productos",
+    "section": "",
+    "text": "Productos\n\nEl producto PISCO_HyM_GR2M es un conjunto de datos de caudales medios mensuales en todo el territorio peruano, simulados mediante el modelo GR2M. Este producto contiene series de tiempo de caudales mensuales desde enero 1981 a Marzo 2020.\nEl producto PISCO_HyD_ARNOVIC es un conjunto de datos de caudales medios diarios en todo el territorio peruano, simulados mediante el modelo ARNOVIC. Este producto contiene series de tiempo de caudales diarios desde el 01-01-1981 al 31-12-2022.\nEl producto SONICS ha sido desarrollado para monitorear y preveer inundaciones fluviales en el territorio peruano. Este sistema proporciona actualizaciones contínuas del estado actual en 12 mil tramos de río a nivel nacional, y pronósticos a un horizonte de 7 días.\n\n\n\n\n\n\nVista del producto SONICS\n\n\nR packages\n\nRClimChange es un paquete desarrollado para la descarga y recorte de datos de Modelos Climáticos Globales (GCM, por sus siglas en inglés) del Sexto (CMIP6). Los datos son extraidos del NASA Earth Exchange Global Daily Downscaled Projections (NEX-GDDP, https://www.nccs.nasa.gov/services/data-collections/land-based-products/nex-gddp-cmip6).\ndevtools::install_github(\"hllauca/RClimChange\")\nlibrary(RClimChange)\nGR2MSemiDistr es un paquete desarrollado para la calibración y ejecución del modelo conceptual GR2M a nivel semi-distribuido (por subcuencas) en grandes dominios de estudio. Este paquete procesa a nivel de subcuencas los datos del producto PISCO, identifica los parámetros óptimos mediante el algoritmo Shufflex Complex Evolutionary (SCE), y rutea los caudales mensuales a la salida de cada subcuenca mediante el algoritmo de Acumulación Ponderada del Flujo (WFAC).\ndevtools::install_github(\"hllauca/GR2MSemiDistr\")\nlibrary(GR2MSemiDistr)"
+  },
+  {
+    "objectID": "index.html#bienvenido",
+    "href": "index.html#bienvenido",
+    "title": "Harold Llauca",
+    "section": "",
+    "text": "Soy un profesional con experiencia en el análisis y modelación de procesos del ciclo hidrológico, desarrollo de pronóstico de caudales a corto y largo plazo, y desarrollo de estudios de variabilidad climática y efectos del cambio climático en la hidrología de cuencas. Tengo especial interés por el desarrollo de ciencia aplicada a servicios que conlleven al establecimiento de políticas robustas para la mitigación de peligros hidrológicos extremos como sequías e inundaciones.\nGracias por visitar mi página…\nHarold Llauca\nHidrología & Recursos Hídricos"
+  }
+]
