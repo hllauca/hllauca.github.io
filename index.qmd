@@ -8,6 +8,12 @@ about:
     - text: LinkedIn
       icon: linkedin
       href: https://www.linkedin.com/in/harold-llauca/
+    - text: ResearchGate
+      icon: researchgate
+      href: https://www.researchgate.net/profile/Harold-Llauca
+    - text: Google Scholar
+      icon: google-scholar
+      href: https://scholar.google.com/citations?user=JfqQNHYAAAAJ&hl=en&oi=ao
     - text: GitHub
       icon: github
       href: https://github.com/hllauca
@@ -18,9 +24,7 @@ about:
 
 ## Welcome!
 
-I am a young professional with experience in the analysis and modeling of hydrological processes, development of short- and long-term flow forecasts, climate change studies and their effects on catchment hydrology, and construction of hydrological datasets using satellite remote sensing and informatics develpoments. My recent studies are focused on develop climate services that support policies for the mitigation of extreme hydrological hazards such as droughts and floods in Peru.
-
-Thanks for visit my website!
+Thanks for visit my website. I am a young professional in water resources with experience in the analysis and modeling of hydrological processes, development of short- and long-term flow forecasts, hydrological regionalization studies, satellite precipitation products' applications, climate change impacts on catchment hydrology, and construction of hydrological data sets. My recent studies are focused on develop climate services that support policies for the mitigation of extreme hydrological hazards such as droughts and floods in Peru.
 
 **Harold Llauca**
 
