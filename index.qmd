@@ -24,7 +24,7 @@ about:
 
 ## Welcome!
 
-Thanks for visit my website. I am a young professional in water resources with experience in the analysis and modeling of hydrological processes, development of short- and long-term flow forecasts, hydrological regionalization studies, satellite precipitation products' applications, climate change impacts on catchment hydrology, and construction of hydrological data sets. My recent studies are focused on develop climate services that support policies for the mitigation of extreme hydrological hazards such as droughts and floods in Peru.
+Thanks for visit my website. I am a young professional in water resources with experience in the analysis and modeling of hydrological processes, development of short- and long-term streamflow forecasts, prediction in ungauged basins, satellite precipitation products' applications, climate change impacts on catchment hydrology, and construction of hydrological data sets. My recent studies are focused on develop climate services that support policies for the mitigation of extreme hydrological hazards in Peru.
 
 **Harold Llauca**
 

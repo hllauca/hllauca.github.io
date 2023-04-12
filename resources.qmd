@@ -1,8 +1,17 @@
-# Development products
+# Hydrological products
 
 -   The [PISCO_HyM_GR2M](https://figshare.com/articles/dataset/PISCO_HyM_GR2M_v1_1/14382758) product is a data set of monthly flows throughout the Peruvian territory, simulated using the GR2M model. It contains time series of mean monthly flows from January 1981 to March 2020.
 
 -   The [PISCO_HyD_ARNOVIC](#0) product is a data set of daily flows throughout the Peruvian territory, simulated using the ARNOVIC model. This product contains time series of mean daily flows from 1981-01-01 to 2022-12-31.
+
+    ![](images/pisco_hyd.jpg)
+
+    | `# Read the PISCO_HyD_ARNOVIC dataset using R`
+    | `require(ncdf4)`
+    | `nc    <- nc_open(´'PISCO_HyD_ARNOVIC_v1.0.nc') # open netCDF file`
+    | `comid <- ncvar_get(nc, 'comid') # read COMID`
+    | `time  <- as.Date(as.POSIXct(ncvar_get(nc,'time'), origin="1970-01-01")) #read time`
+    | `qr    <- round(t(ncvar_get(nc,'qr')),1) #read daily discharges`
 
 -   The [SONICS](#0) product has been developed for monitoring and forecasting fluvial floods in Peru. This system provides continuous updates on the current state of 12,000 river reaches nationwide, and forecasts for a 7-day horizon.
 
@@ -14,12 +23,10 @@
 
 -   [RClimChange](https://github.com/hllauca/RClimChange) is a package developed for downloading and subsetting data from Global Climate Models (GCM) of the Coupled Model Intercomparison Project phase 6 (CMIP6). The data is extracted from *NASA Earth Exchange Global Daily Downscaled Projections* (NEX-GDDP, <https://www.nccs.nasa.gov/services/data-collections/land-based-products/nex-gddp-cmip6>).
 
-    `devtools::install_github("hllauca/RClimChange")`
-
-    `library(RClimChange)`
+    | `devtools::install_github("hllauca/RClimChange")`
+    | `library(RClimChange)`
 
 -   [GR2MSemiDistr](https://github.com/hllauca/GR2MSemiDistr) is a package for the execution of the GR2M conceptual model at a semi-distributed level (by sub-basins) in large domains. This package processes the PISCO forcing data at the sub-basin level, identifies the optimal set of model parameters using the Shuffle Complex Evolutionary (SCE) algorithm, and routes monthly flows to the outlet of each sub-basin using the Weighted Flow Accumulation (WFAC) algorithm.
 
-    `devtools::install_github("hllauca/GR2MSemiDistr")`
-
-    `library(GR2MSemiDistr)`
+    | `devtools::install_github("hllauca/GR2MSemiDistr")`
+    | `library(GR2MSemiDistr)`

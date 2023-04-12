@@ -14,16 +14,16 @@
 
 -   **Fieldworker in Water Resources (2013).** VLIR/UOS-UNALM program.
 
-# Area of interest
+# Areas of interest
 
 -   Large-sample hydrology
 
 -   Hydrological modeling.
 
--   Floods monitoring.
+-   Floods monitoring systems.
 
 -   Uncertainties in hydrological forecasting.
 
 -   Climate change and water resources.
 
--   Hydroinformatics.
+-   Hydroinformatic applications.
