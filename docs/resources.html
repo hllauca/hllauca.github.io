@@ -90,12 +90,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Profile</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./publications.html" rel="" target="">
- <span class="menu-text">Publications</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link active" href="./resources.html" rel="" target="" aria-current="page">
  <span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./publications.html" rel="" target="">
+ <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./CV_Harold_Llauca.pdf" rel="" target="">
@@ -130,33 +130,57 @@ ul.task-list li input[type="checkbox"] {
 <section id="hydrological-products" class="level1">
 <h1>Hydrological products</h1>
 <ul>
-<li><p>The <a href="https://figshare.com/articles/dataset/PISCO_HyM_GR2M_v1_1/14382758">PISCO_HyM_GR2M</a> product is a data set of monthly flows throughout the Peruvian territory, simulated using the GR2M model. It contains time series of mean monthly flows from January 1981 to March 2020.</p></li>
-<li><p>The <a href="#0">PISCO_HyD_ARNOVIC</a> product is a data set of daily flows throughout the Peruvian territory, simulated using the ARNOVIC model. This product contains time series of mean daily flows from 1981-01-01 to 2022-12-31.</p>
+<li><p>The <a href="https://www.hydroshare.org/resource/f1b537f338f24533af5dab946b51d215/">PISCO_HyM_GR2M</a> product is a data set of monthly flows throughout the Peruvian territory, simulated using the GR2M model. It contains time series of mean monthly flows from January 1981 to December 2022.</p>
+<p><img src="images/pisco_hym.jpg" class="img-fluid"></p>
+<p><code># Download netcdf file using R</code><br>
+<code>require(RCurl)</code><br>
+<code>filename &lt;- 'PISCO_HyM_GR2M_v1.1.nc'</code><br>
+<code>server   &lt;- 'http://thredds.hydroshare.org/thredds/fileServer/hydroshare/resources/f1b537f338f24533af5dab946b51d215/data/contents'</code><br>
+<code>download.file(url=file.path(server,filename),destfile=filename)</code></p>
+<p><br>
+</p></li>
+<li><p>The <a href="https://www.hydroshare.org/resource/f723d6c762ca45b6936dd9489bc44842/">PISCO_HyD_ARNOVIC</a> product is a data set of daily flows throughout the Peruvian territory, simulated using the ARNOVIC model. This product contains time series of mean daily flows from 1981-01-01 to 2022-12-31.</p>
 <p><img src="images/pisco_hyd.jpg" class="img-fluid"></p>
-<p><code># Read the PISCO_HyD_ARNOVIC dataset using R</code><br>
-<code>require(ncdf4)</code><br>
-<code>nc    &lt;- nc_open(´'PISCO_HyD_ARNOVIC_v1.0.nc') # open netCDF file</code><br>
-<code>comid &lt;- ncvar_get(nc, 'comid') # read COMID</code><br>
-<code>time  &lt;- as.Date(as.POSIXct(ncvar_get(nc,'time'), origin="1970-01-01")) #read time</code><br>
-<code>qr    &lt;- round(t(ncvar_get(nc,'qr')),1) #read daily discharges</code></p></li>
-<li><p>The <a href="#0">SONICS</a> product has been developed for monitoring and forecasting fluvial floods in Peru. This system provides continuous updates on the current state of 12,000 river reaches nationwide, and forecasts for a 7-day horizon.</p></li>
-</ul>
+<p><code># Download netcdf file using R</code><br>
+<code>require(RCurl)</code><br>
+<code>filename &lt;- 'PISCO_HyD_ARNOVIC_v1.0.nc'</code><br>
+<code>server   &lt;- 'http://thredds.hydroshare.org/thredds/fileServer/hydroshare/resources/f723d6c762ca45b6936dd9489bc44842/data/contents'</code><br>
+<code>download.file(url=file.path(server,filename),destfile=filename)</code></p>
+<p><br>
+</p></li>
+<li><p>The <a href="https://harold-llauca.shinyapps.io/sonics/">SONICS</a> dashboard has been developed for monitoring and forecasting fluvial floods in Peru. This system provides continuous updates on the current state of 12 thousand river reaches nationwide, and forecasts for a 7-day horizon.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src=".\sonics.PNG" class="img-fluid figure-img" width="1000"></p>
 </figure>
-</div>
-<p><span class="smallcaps"><em>The sonics’ dashboard</em></span></p>
+</div></li>
+</ul>
+<p><br>
+</p>
 </section>
 <section id="r-packages" class="level1">
 <h1>R packages</h1>
 <ul>
-<li><p><a href="https://github.com/hllauca/RClimChange">RClimChange</a> is a package developed for downloading and subsetting data from Global Climate Models (GCM) of the Coupled Model Intercomparison Project phase 6 (CMIP6). The data is extracted from <em>NASA Earth Exchange Global Daily Downscaled Projections</em> (NEX-GDDP, <a href="https://www.nccs.nasa.gov/services/data-collections/land-based-products/nex-gddp-cmip6" class="uri">https://www.nccs.nasa.gov/services/data-collections/land-based-products/nex-gddp-cmip6</a>).</p>
-<p><code>devtools::install_github("hllauca/RClimChange")</code><br>
-<code>library(RClimChange)</code></p></li>
 <li><p><a href="https://github.com/hllauca/GR2MSemiDistr">GR2MSemiDistr</a> is a package for the execution of the GR2M conceptual model at a semi-distributed level (by sub-basins) in large domains. This package processes the PISCO forcing data at the sub-basin level, identifies the optimal set of model parameters using the Shuffle Complex Evolutionary (SCE) algorithm, and routes monthly flows to the outlet of each sub-basin using the Weighted Flow Accumulation (WFAC) algorithm.</p>
-<p><code>devtools::install_github("hllauca/GR2MSemiDistr")</code><br>
-<code>library(GR2MSemiDistr)</code></p></li>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://github.com/hllauca/GR2MSemiDistr/blob/master/docs/GR2MSemiDistr_4.1.pdf"><img src="images/gr2m_package.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p><code># Installing the package</code><br>
+<code>devtools::install_github("hllauca/GR2MSemiDistr")</code><br>
+<code>library(GR2MSemiDistr)</code></p>
+<p><br>
+</p></li>
+<li><p><a href="https://github.com/hllauca/RClimChange">RClimChange</a> is a package developed for downloading and subsetting data from Global Climate Models (GCM) of the Coupled Model Intercomparison Project phase 6 (CMIP6). The data is extracted from <em>NASA Earth Exchange Global Daily Downscaled Projections</em> (NEX-GDDP, <a href="https://www.nccs.nasa.gov/services/data-collections/land-based-products/nex-gddp-cmip6" class="uri">https://www.nccs.nasa.gov/services/data-collections/land-based-products/nex-gddp-cmip6</a>).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://github.com/hllauca/RClimChange/blob/master/docs/RClimChange_3.2.2.pdf"><img src="images/cim_package.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p><code># Installing the package</code><br>
+<code>devtools::install_github("hllauca/RClimChange")</code><br>
+<code>library(RClimChange)</code></p></li>
 </ul>
 
 

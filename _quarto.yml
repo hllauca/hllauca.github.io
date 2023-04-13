@@ -11,10 +11,10 @@ website:
         text: Home
       - href: about.qmd
         text: Profile
-      - href: publications.qmd
-        text: Publications
       - href: resources.qmd
         text: Resources
+      - href: publications.qmd
+        text: Publications
       - href: CV_Harold_Llauca.pdf
         text: CV
     page-footer: "Copyright 2023, Harold Llauca"
@@ -26,4 +26,3 @@ format:
     toc: true
 
 editor: visual
-
