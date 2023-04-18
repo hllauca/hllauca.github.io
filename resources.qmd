@@ -26,7 +26,7 @@
 
 -   The [SONICS](https://harold-llauca.shinyapps.io/sonics/) dashboard has been developed for monitoring and forecasting fluvial floods in Peru. This system provides continuous updates on the current state of 12 thousand river reaches nationwide, and forecasts for a 7-day horizon.
 
-    ![](/sonics.PNG){fig-align="center" width="1000"}
+    ![](images/Captura%20de%20pantalla%202023-04-17%20145516.png)
 
 \
 
