@@ -1,12 +1,14 @@
 # Education
 
+-   **PhD. Student in Water Resources** \| National Agrarian University La Molina \| Postgraduate School. 2022.
+
 -   **MSc. in Water and Environmental Resources** \| University of Chile \| Faculty of Physics and Mathematics Sciences \| Department of Civil Engineering. 2018.
 
 -   **Agricultural Engineer** \| National Agrarian University La Molina \| Faculty of Agricultural Engineering. 2014.
 
 # Work history
 
--   **Researcher in hydrology (2019-present)** \| National Service of Meteorology and Hydrology of Peru (SENAMHI).
+-   **Researcher in Hydrology (2019-present)** \| National Service of Meteorology and Hydrology of Peru (SENAMHI).
 
 -   **Research assistant in Snow Hydrology (2016-2018)** \| Department of Civil Engineering. University of Chile.
 
@@ -26,4 +28,4 @@
 
 -   Climate change and water resources.
 
--   Hydroinformatic applications.
+-   Hydroinformatics.

@@ -16,7 +16,7 @@
 -   Asurza Véliz, F. A., Traverso-Yucra, K. A., Lavado-Casimiro, W. S., Felipe-Obando, O., Montesinos-Cáceres, C. A., and **Llauca-Soto, H. O.**: Surface water resources assessment in Peru through SWAT hydrological model, EGU General Assembly 2020, Online, 4--8 May 2020, EGU2020-6308, <https://doi.org/10.5194/egusphere-egu2020-6308>.
 -   Waldo, L.-C., Juan Carlos, J., **Harold, L**., Karen, L., Clara, O., Alan, L., Adrian, H., Oscar, F., Julia, A., Pedro, R., and Jorge, A.: ANDES: The first system for flash flood monitoring and forecasting in Peru, EGU General Assembly 2020, Online, 4--8 May 2020, EGU2020-3759, <https://doi.org/10.5194/egusphere-egu2020-3759>.
 
-# Others
+# Others studies
 
 -   **Llauca Soto, H.** (2023). Asimilación de caudales observados en la modelación hidrológica subdiaria del río Vilcanota en la estación Pisac. Available in <https://hdl.handle.net/20.500.12542/2613>.
 

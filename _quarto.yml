@@ -15,8 +15,6 @@ website:
         text: Resources
       - href: publications.qmd
         text: Publications
-      - href: CV_Harold_Llauca.pdf
-        text: CV
     page-footer: "Copyright 2023, Harold Llauca"
 
 format:
