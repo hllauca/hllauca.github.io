@@ -13,7 +13,7 @@ image: courses.jpeg
 draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
 ---
 
-# **R aplicado a la Hidrología \[julio 2023 - abierto\]**
+# **R aplicado a la Hidrología - Julio 2023 \[Inscripciones abiertas\]**
 
 Curso-taller de entrenamiento en el lenguaje de programación R con aplicaciones en la Hidrología (introducción al lenguaje R, lectura y visualizacíon de datos, manejo de datos climáticos grillados, evaluación y modelación hidrológica).
 
@@ -25,19 +25,19 @@ Curso-taller de entrenamiento en el lenguaje de programación R con aplicaciones
 
 ![](images/Rcourse-01.jpeg){fig-align="center" width="500"}
 
-# **R aplicado a la Hidrología \[abril 2023 - cerrado\]**
+# **R aplicado a la Hidrología - Abril 2023 \[Finalizado\]**
 
 Curso-taller de entrenamiento en el lenguaje de programación R con aplicaciones en la Hidrología (introducción al lenguaje R, lectura y visualizacíon de datos, manejo de datos climáticos grillados, evaluación y modelación hidrológica).
 
 ![](images/r_curso.png){fig-align="center" width="500"}
 
-# Introducción a la modelación hidrológica estacional aplicando el modelo semidistribuido GR2M \[Diciembre 2022 - Cerrado\]
+# Introducción a la modelación hidrológica estacional aplicando el modelo semidistribuido GR2M - Diciembre 2022 **\[Finalizado**\]
 
 Curso-taller de entrenamiento en el modelo conceptual GR2M, aplicando el paquete GR2MSemiDistr en la simulación hidrológica de caudales medios mensuales aplicando el lenguaje de programación R.
 
 ![](images/gr2m_curso.png){fig-align="center" width="500"}
 
-# Modelos de Cambio Climático para la Evaluación de la Disponibilidad Hídrica Futura \[Noviembre 2018 - Cerrado\]
+# Modelos de Cambio Climático para la Evaluación de la Disponibilidad Hídrica Futura - Noviembre 2018 \[Finalizado\]
 
 Curso-taller de entrenamiento en la descarga, post-procesamiento, escalamiento estadístico y corrección del sesgo de Modelos Climáticos Globales del CMIP5, y su aplicación en la hidrología de cuencas.
 
