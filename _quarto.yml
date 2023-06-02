@@ -11,15 +11,17 @@ website:
         text: Home
       - href: about.qmd
         text: Profile
-      - href: resources.qmd
-        text: Resources
       - href: publications.qmd
         text: Publications
+      - href: resources.qmd
+        text: Resources
+      - href: posts.qmd
+        text: Blog
     page-footer: "Copyright 2023, Harold Llauca"
 
 format:
   html:
-    theme: spacelab
+    theme: sandstone
     css: styles.css
     toc: true
 

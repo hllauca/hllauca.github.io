@@ -1,0 +1,44 @@
+---
+title: "Training courses"
+description: "You can check here my available training courses on some hydrology topics (dictados en español)."
+author:
+  - name: Harold Llauca
+    url: https://hllauca.github.io/
+    orcid: 0000-0001-7462-2548
+date: 06-02-2023
+categories: [R programming, Hydrological Modeling, Climate Change] # self-defined categories
+citation: 
+  url: https://hllauca.github.io/posts/2023-06-02-quarto-blogs/ 
+image: courses.jpeg
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+
+# **R aplicado a la Hidrología \[julio 2023 - abierto\]**
+
+Curso-taller de entrenamiento en el lenguaje de programación R con aplicaciones en la Hidrología (introducción al lenguaje R, lectura y visualizacíon de datos, manejo de datos climáticos grillados, evaluación y modelación hidrológica).
+
+-   **Fechas:** 15, 16, 22 y 23 de julio de 2023.
+
+-   **Duración:** 24 horas lectivas.
+
+-   **Modalidad:** Online (sincrónico).
+
+![](images/Rcourse-01.jpeg){fig-align="center" width="500"}
+
+# **R aplicado a la Hidrología \[abril 2023 - cerrado\]**
+
+Curso-taller de entrenamiento en el lenguaje de programación R con aplicaciones en la Hidrología (introducción al lenguaje R, lectura y visualizacíon de datos, manejo de datos climáticos grillados, evaluación y modelación hidrológica).
+
+![](images/r_curso.png){fig-align="center" width="500"}
+
+# Introducción a la modelación hidrológica estacional aplicando el modelo semidistribuido GR2M \[Diciembre 2022 - Cerrado\]
+
+Curso-taller de entrenamiento en el modelo conceptual GR2M, aplicando el paquete GR2MSemiDistr en la simulación hidrológica de caudales medios mensuales aplicando el lenguaje de programación R.
+
+![](images/gr2m_curso.png){fig-align="center" width="500"}
+
+# Modelos de Cambio Climático para la Evaluación de la Disponibilidad Hídrica Futura \[Noviembre 2018 - Cerrado\]
+
+Curso-taller de entrenamiento en la descarga, post-procesamiento, escalamiento estadístico y corrección del sesgo de Modelos Climáticos Globales del CMIP5, y su aplicación en la hidrología de cuencas.
+
+![](images/taylor_idw_527_ssp585.png){fig-align="center" width="500"}

@@ -5,26 +5,31 @@ about:
   image-shape: rounded
   image-width: 15em
   links:
+    - text: Phone
+      icon: whatsapp
+      href: https://wa.me/+51954301911
+    - text: Email
+      icon: envelope
+      href: mailto:hllauca@gmail.com
     - text: LinkedIn
       icon: linkedin
       href: https://www.linkedin.com/in/harold-llauca/
+    - text: GitHub
+      icon: github
+      href: https://github.com/hllauca
     - text: ResearchGate
       icon: researchgate
       href: https://www.researchgate.net/profile/Harold-Llauca
     - text: Google Scholar
       icon: google-scholar
       href: https://scholar.google.com/citations?user=JfqQNHYAAAAJ&hl=en&oi=ao
-    - text: GitHub
-      icon: github
-      href: https://github.com/hllauca
-    - text: Email
-      icon: envelope
-      href: mailto:hllauca@gmail.com
 ---
 
 ## Welcome!
 
-Thanks for visit my website. I am a professional in water resources with experience in the analysis and modeling of hydrological processes, development of short- and long-term streamflow forecasts, prediction in ungauged basins, satellite precipitation products' applications, climate change impacts on catchment hydrology, and developer of hydroinformatic applications. My recent studies are focused on climate services that support policies for the mitigation of extreme hydrological hazards in Peru.
+Thanks for visit my personal website. I am a professional in water resources with experience in the analysis and modeling of hydrological processes, development of short- and long-term streamflow forecasts, runoff prediction in ungauged basins, satellite precipitation products' applications, climate change impacts on catchment hydrology, and hydroinformatic applications.
+
+My recent work are focused on develop new climate services that support detection and prediction of extreme hydrological hazards in Peru.
 
 ------------------------------------------------------------------------
 

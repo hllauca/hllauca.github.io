@@ -26,7 +26,7 @@
 
 -   The [SONICS](https://harold-llauca.shinyapps.io/sonics/) dashboard has been developed for monitoring and forecasting fluvial floods in Peru. This system provides continuous updates on the current state of 12 thousand river reaches nationwide, and forecasts for a 7-day horizon.
 
-    ![](images/Captura%20de%20pantalla%202023-04-17%20145516.png)
+    ![](images/sonics.png)
 
 \
 
@@ -44,7 +44,7 @@
 
 -   [RClimChange](https://github.com/hllauca/RClimChange) is a package developed for downloading and subsetting data from Global Climate Models (GCM) of the Coupled Model Intercomparison Project phase 6 (CMIP6). The data is extracted from *NASA Earth Exchange Global Daily Downscaled Projections* (NEX-GDDP, <https://www.nccs.nasa.gov/services/data-collections/land-based-products/nex-gddp-cmip6>).
 
-    [![](images/cim_package.jpg)](https://github.com/hllauca/RClimChange/blob/master/docs/RClimChange_3.2.2.pdf)
+    [![](images/clim_package.jpg)](https://github.com/hllauca/RClimChange/blob/master/docs/RClimChange_3.2.2.pdf)
 
     | `# Installing the package`
     | `devtools::install_github("hllauca/RClimChange")`
