@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Harold Llauca">
-<meta name="dcterms.date" content="2023-05-15">
-<meta name="description" content="You can check here my available training courses on some hydrology topics (dictados en español).">
+<meta name="dcterms.date" content="2023-06-04">
+<meta name="description" content="A brief review about gridded datasets constructed for Peruvian domain.">
 
-<title>Harold Llauca - Training courses</title>
+<title>Harold Llauca - Gridded Hydro-meteorological Data for Peru</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,17 +116,17 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Training courses</h1>
+      <h1 class="title">Gridded Hydro-meteorological Data for Peru</h1>
                   <div>
         <div class="description">
-          You can check here my available training courses on some hydrology topics (dictados en español).
+          A brief review about gridded datasets constructed for Peruvian domain.
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">Peru</div>
-                <div class="quarto-category">R programming</div>
-                <div class="quarto-category">Hydrological Modeling</div>
-                <div class="quarto-category">Climate Change</div>
+                <div class="quarto-category">Datasets</div>
+                <div class="quarto-category">PISCO</div>
+                <div class="quarto-category">RAIN4PE</div>
               </div>
                   </div>
   </div>
@@ -144,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">May 15, 2023</p>
+        <p class="date">June 4, 2023</p>
       </div>
     </div>
     
@@ -160,10 +160,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#r-aplicado-a-la-hidrología---julio-2023-inscripciones-abiertas" id="toc-r-aplicado-a-la-hidrología---julio-2023-inscripciones-abiertas" class="nav-link active" data-scroll-target="#r-aplicado-a-la-hidrología---julio-2023-inscripciones-abiertas"><strong>R aplicado a la Hidrología - Julio 2023 [Inscripciones abiertas]</strong></a></li>
-  <li><a href="#r-aplicado-a-la-hidrología---abril-2023-finalizado" id="toc-r-aplicado-a-la-hidrología---abril-2023-finalizado" class="nav-link" data-scroll-target="#r-aplicado-a-la-hidrología---abril-2023-finalizado"><strong>R aplicado a la Hidrología - Abril 2023 [Finalizado]</strong></a></li>
-  <li><a href="#introducción-a-la-modelación-hidrológica-estacional-aplicando-el-modelo-semidistribuido-gr2m---diciembre-2022-finalizado" id="toc-introducción-a-la-modelación-hidrológica-estacional-aplicando-el-modelo-semidistribuido-gr2m---diciembre-2022-finalizado" class="nav-link" data-scroll-target="#introducción-a-la-modelación-hidrológica-estacional-aplicando-el-modelo-semidistribuido-gr2m---diciembre-2022-finalizado">Introducción a la modelación hidrológica estacional aplicando el modelo semidistribuido GR2M - Diciembre 2022 <strong>[Finalizado</strong>]</a></li>
-  <li><a href="#modelos-de-cambio-climático-para-la-evaluación-de-la-disponibilidad-hídrica-futura---noviembre-2018-finalizado" id="toc-modelos-de-cambio-climático-para-la-evaluación-de-la-disponibilidad-hídrica-futura---noviembre-2018-finalizado" class="nav-link" data-scroll-target="#modelos-de-cambio-climático-para-la-evaluación-de-la-disponibilidad-hídrica-futura---noviembre-2018-finalizado">Modelos de Cambio Climático para la Evaluación de la Disponibilidad Hídrica Futura - Noviembre 2018 [Finalizado]</a></li>
+  <li><a href="#gridded-hydro-meteorological-data-for-peru" id="toc-gridded-hydro-meteorological-data-for-peru" class="nav-link active" data-scroll-target="#gridded-hydro-meteorological-data-for-peru">Gridded Hydro-meteorological Data for Peru</a>
+  <ul class="collapse">
+  <li><a href="#the-pisco-product" id="toc-the-pisco-product" class="nav-link" data-scroll-target="#the-pisco-product">The PISCO product</a></li>
+  <li><a href="#the-rain4pe-product" id="toc-the-rain4pe-product" class="nav-link" data-scroll-target="#the-rain4pe-product">The RAIN4PE product</a></li>
+  <li><a href="#what-is-the-netcdf-format" id="toc-what-is-the-netcdf-format" class="nav-link" data-scroll-target="#what-is-the-netcdf-format">What is the NetCDF format?</a></li>
+  <li><a href="#how-to-access-data" id="toc-how-to-access-data" class="nav-link" data-scroll-target="#how-to-access-data">How to access data?</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -173,59 +177,97 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="r-aplicado-a-la-hidrología---julio-2023-inscripciones-abiertas" class="level1">
-<h1><strong>R aplicado a la Hidrología - Julio 2023 [Inscripciones abiertas]</strong></h1>
-<p>Curso-taller de entrenamiento en el lenguaje de programación R con aplicaciones en la Hidrología (introducción al lenguaje R, lectura y visualizacíon de datos, manejo de datos climáticos grillados, evaluación y modelación hidrológica).</p>
-<ul>
-<li><p><strong>Fechas:</strong> 15, 16, 22 y 23 de julio de 2023.</p></li>
-<li><p><strong>Duración:</strong> 24 horas lectivas.</p></li>
-<li><p><strong>Modalidad:</strong> Online (sincrónico).</p></li>
-</ul>
+<section id="gridded-hydro-meteorological-data-for-peru" class="level1">
+<h1>Gridded Hydro-meteorological Data for Peru</h1>
+<p>Ground hydrometeorological observations are space-time limited in countries such as Peru. This data scarcity context impulses the use of Satellite Precipitation Products (SPP) in hydrological applications. SPPs provide gridded estimations of meteorological variables such as precipitation and air temperature with high temporal and spatial resolution. However; due to the biases of SPPs, merging of ground information (gauges) and SPPs - using geostatistical techniques - might increase the representation of these variables in the whole country as is shown in the following figure.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/Rcourse-01.jpeg" class="img-fluid figure-img" width="500"></p>
+<p><img src="rainfall.png" class="img-fluid figure-img" width="500"></p>
+<figcaption class="figure-caption">Daily rainfall rates [mm/d] for the Peruvian territory from PISCO product.</figcaption>
 </figure>
 </div>
+<p>Here, we describe gridded datasets built for the Peruvian territory:<br>
+<br>
+</p>
+<hr>
+<section id="the-pisco-product" class="level3">
+<h3 class="anchored" data-anchor-id="the-pisco-product">The PISCO product</h3>
+<p>The <strong>Peruvian Interpolated data of the SENAMHI’s Climatological and hydrological Observations (PISCO)</strong> is a hydro-meteorological gridded dataset developed for the Peruvian territory by the <strong>National Services of Meteorology and Hydrology of Peru</strong> (<a href="https://www.gob.pe/senamhi">SENAMHI</a>), including trans-boundary catchments with Ecuador and Colombia. It has a 0.1º (~10km) spatial resolution at daily time steps. It contains sub-products of precipitation (P), air temperature (TA), and evapotranspiration (PE) variables.</p>
+<p>The PISCO<sub>P,TA</sub> sub-products are available from 1981 to 2016 (stable versions). However, an unstable version only for PISCO<sub>P</sub> is available from 1981 to the present, and it is daily updated only for SENAMHI’s operational purposes. PISCO<sub>P</sub> (Aybar et al., 2020) is generated by using geostatistical and deterministic methods that include three precipitation sources: (a) the quality-controlled national rain gauge dataset, (b) radar-gauge merged precipitation climatologies, and (c) the Climate Hazards Group Infrared Precipitation (CHIRP) estimates.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/piscop_flowchart.png" class="img-fluid figure-img" width="500"></p>
+<figcaption class="figure-caption">Schematic framework of the PISCOP sub-product (version 2.1). Source: Aybar et al.&nbsp;(2020).</figcaption>
+</figure>
+</div>
+<p>Similarly, PISCO<sub>TA</sub> (Huerta et al., 2018) is obtained from: a) time series of maximum and minimum air temperature data, (b) a soil temperature product from the MODIS sensor (Moderate Resolution Imaging Spectroradiometer), and (c) geographic predictors (e.g., elevation, longitude, latitude and Topographic Dissection Index). Recently, the new PISCO<sub>PE</sub> sub-product (Huerta et al., 2022) has been generated following the Penman-Monteith equation and has a ~1km spatial resolution.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/piscota_flowchart.png" class="img-fluid figure-img" width="500"></p>
+<figcaption class="figure-caption">Schematic framework of the PISCOPE sub-product (version 2.1). Source: Huerta et al.&nbsp;(2022).</figcaption>
+</figure>
+</div>
+<p><br>
+</p>
+<hr>
 </section>
-<section id="r-aplicado-a-la-hidrología---abril-2023-finalizado" class="level1">
-<h1><strong>R aplicado a la Hidrología - Abril 2023 [Finalizado]</strong></h1>
-<p>Curso-taller de entrenamiento en el lenguaje de programación R con aplicaciones en la Hidrología (introducción al lenguaje R, lectura y visualizacíon de datos, manejo de datos climáticos grillados, evaluación y modelación hidrológica).</p>
+<section id="the-rain4pe-product" class="level3">
+<h3 class="anchored" data-anchor-id="the-rain4pe-product">The RAIN4PE product</h3>
+<p>According to the POTSDAM INSTITUTE FOR CLIMATE IMPACT RESEARCH (<a href="https://www.pik-potsdam.de/en">PIK</a>), RAIN4PE (Fernandez-Palomino et al., 2021) is a novel daily gridded precipitation dataset obtained by merging multi-source precipitation data (satellite-based Climate Hazards Group InfraRed Precipitation, CHIRP (Funk et al.&nbsp;2015), reanalysis ERA5 (Hersbach et al.&nbsp;2020), and ground-based precipitation) with terrain elevation using the random forest regression method. Furthermore, RAIN4PE is hydrologically corrected using streamflow data in catchments with precipitation underestimation through reverse hydrology. Hence, RAIN4PE is the only gridded precipitation product for Peru and Ecuador, which benefits from maximum available in-situ observations, multiple precipitation sources, elevation data, and is supplemented by streamflow data to correct the precipitation underestimation over páramos and montane catchments.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/r_curso.png" class="img-fluid figure-img" width="500"></p>
+<p><img src="images/rain4pe_flowchart.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Schematic framework of the RAIN4PE product. Source: Fernandez et al.&nbsp;(2022).</figcaption>
 </figure>
 </div>
+<p>The RAIN4PE data are available for the terrestrial land surface between 19°S-2°N and 82-67°W, at 0.1° spatial and daily temporal resolution from 1981 to 2015. The precipitation dataset is provided in netCDF format.<br>
+<br>
+</p>
+<hr>
 </section>
-<section id="introducción-a-la-modelación-hidrológica-estacional-aplicando-el-modelo-semidistribuido-gr2m---diciembre-2022-finalizado" class="level1">
-<h1>Introducción a la modelación hidrológica estacional aplicando el modelo semidistribuido GR2M - Diciembre 2022 <strong>[Finalizado</strong>]</h1>
-<p>Curso-taller de entrenamiento en el modelo conceptual GR2M, aplicando el paquete GR2MSemiDistr en la simulación hidrológica de caudales medios mensuales aplicando el lenguaje de programación R.</p>
+<section id="what-is-the-netcdf-format" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-the-netcdf-format">What is the NetCDF format?</h3>
+<p>The Network Common Data Form (NetCDF) is a data format for storing multidimensional (variables) scientific data. There are large number of software and libraries to read netCDF files such as <a href="https://www.giss.nasa.gov/tools/panoply/">Panoply</a> software, the <a href="https://cran.r-project.org/web/packages/ncdf4/ncdf4.pdf">ncdf4</a> R package, or the <a href="https://unidata.github.io/netcdf4-python/">netCDF4</a> package in python.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/gr2m_curso.png" class="img-fluid figure-img" width="500"></p>
+<p><a href="https://www.guillaumedueymes.com/courses/tutorial_python_netcdf/1-netcdf_tutorial/"><img src="images/netcdf.png" class="img-fluid figure-img" width="500"></a></p>
+<figcaption class="figure-caption">Structure of a netCDF file. Source: www.guillaumedueymes.com.</figcaption>
 </figure>
 </div>
+<p>The <strong>PISCO</strong> and <strong>RAIN4PE</strong> datasets are available in netCDF format, and consider one variable (precipitation, air temperature, or evapotranspiration) and three dimensions (longitude, latitude and time).<br>
+<br>
+</p>
+<hr>
 </section>
-<section id="modelos-de-cambio-climático-para-la-evaluación-de-la-disponibilidad-hídrica-futura---noviembre-2018-finalizado" class="level1">
-<h1>Modelos de Cambio Climático para la Evaluación de la Disponibilidad Hídrica Futura - Noviembre 2018 [Finalizado]</h1>
-<p>Curso-taller de entrenamiento en la descarga, post-procesamiento, escalamiento estadístico y corrección del sesgo de Modelos Climáticos Globales del CMIP5, y su aplicación en la hidrología de cuencas.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/taylor_idw_527_ssp585.png" class="img-fluid figure-img" width="500"></p>
-</figure>
-</div>
+<section id="how-to-access-data" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-access-data">How to access data?</h3>
+<p>Theses datasets could be downloaded from <a href="https://drive.google.com/drive/folders/1qrV_1bqaeuoXt0vCBTahaRGBFDIOt1vR?usp=sharing">Drive</a>. In case of the PISCO<sub>PE</sub> sub-product, data of 1 km resolution must be downloaded from <a href="https://doi.org/10.6084/m9.figshare.c.5633182.v3">figshare</a>.</p>
+<p><br>
+</p>
+<hr>
+</section>
+<section id="references" class="level3">
+<h3 class="anchored" data-anchor-id="references">References</h3>
+<p>Aybar, Cesar, Carlos Fernández, Adrian Huerta, Waldo Lavado, Fiorella Vega, and Oscar Felipe-Obando. 2019. “Construction of a High-Resolution Gridded Rainfall Dataset for Peru from 1981 to the Present Day.” <em>Hydrological Sciences Journal</em> 65 (5): 770–85. <a href="https://doi.org/10.1080/02626667.2019.1649411" class="uri">https://doi.org/10.1080/02626667.2019.1649411</a>.</p>
+<p>Fernandez-Palomino, C.A., Hattermann, F.F., Krysanova, V., Lobanova, A., Vega-Jacome, ´ F., Lavado, W., Santini, W., Aybar, C., Bronstert, A., 2021. A novel highresolution gridded precipitation dataset for Peruvian and Ecuadorian watersheds – development and hydrological evaluation. J. Hydrometeorol. 1. <a href="https://doi.%20org/10.1175/jhm-d-20-0285.1">https://doi. org/10.1175/jhm-d-20-0285.1</a>.</p>
+<p>Huerta, A.; Aybar, C.; Lavado-Casimiro, W. PISCO temperatura v.1.1. SENAMHI - DHI-2018, Lima-Perú. Available on <a href="http://iridl.ldeo.columbia.edu/documentation/.pisco/.PISCOt_report.pdf" class="uri">http://iridl.ldeo.columbia.edu/documentation/.pisco/.PISCOt_report.pdf</a>.</p>
+<p>Huerta, Adrian, Vivien Bonnesoeur, José Cuadros-Adriazola, Leonardo Gutierrez, Boris F. Ochoa-Tocachi, Francisco Román-Dañobeytia, and Waldo Lavado-Casimiro. 2022. “PISCOeo_pm, a Reference Evapotranspiration Gridded Database Based on FAO Penman-Monteith in Peru.” <em>Scientific Data</em> 9 (1). <a href="https://doi.org/10.1038/s41597-022-01373-8" class="uri">https://doi.org/10.1038/s41597-022-01373-8</a>.</p>
+<p>Huerta, Adrian, Vivien Bonnesoeur, Jose Cuadros, Leonardo Flavio Gutierrez Lope, Boris Ochoa-Tocachi, Francisco Román-Dañobeytia, and Waldo Lavado-Casimiro. 2022. “PISCOeo_pm, a Reference Evapotranspiration Gridded Database Based on FAO Penman-Monteith in Peru.” <a href="https://doi.org/10.6084/M9.FIGSHARE.C.5633182.V3" class="uri">https://doi.org/10.6084/M9.FIGSHARE.C.5633182.V3</a>.</p>
 
 
+</section>
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{llauca2023,
   author = {Llauca, Harold},
-  title = {Training Courses},
-  date = {2023-05-15},
-  url = {https://hllauca.github.io/posts/2023-06-02-quarto-blogs/},
+  title = {Gridded {Hydro-meteorological} {Data} for {Peru}},
+  date = {2023-06-04},
+  url = {https://hllauca.github.io/posts/2023-06-04-quarto-blogs/},
   langid = {en}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-llauca2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-Llauca, Harold. 2023. <span>“Training Courses.”</span> May 15, 2023. <a href="https://hllauca.github.io/posts/2023-06-02-quarto-blogs/">https://hllauca.github.io/posts/2023-06-02-quarto-blogs/</a>.
+Llauca, Harold. 2023. <span>“Gridded Hydro-Meteorological Data for
+Peru.”</span> June 4, 2023. <a href="https://hllauca.github.io/posts/2023-06-04-quarto-blogs/">https://hllauca.github.io/posts/2023-06-04-quarto-blogs/</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
