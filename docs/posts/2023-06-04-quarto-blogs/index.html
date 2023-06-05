@@ -2,15 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.361">
+<meta name="generator" content="quarto-1.3.313">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Harold Llauca">
 <meta name="dcterms.date" content="2023-06-04">
-<meta name="description" content="A brief review about gridded datasets constructed for Peruvian domain.">
+<meta name="description" content="A brief review about gridded data-sets developed for the Peruvian domain.">
 
-<title>Harold Llauca - Gridded Hydro-meteorological Data for Peru</title>
+<title>Harold Llauca - Gridded hydro-meteorological data for Peru</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,8 +59,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-submit-button-title": "Submit"
   }
 }</script>
 
@@ -116,15 +115,15 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Gridded Hydro-meteorological Data for Peru</h1>
+      <h1 class="title">Gridded hydro-meteorological data for Peru</h1>
                   <div>
         <div class="description">
-          A brief review about gridded datasets constructed for Peruvian domain.
+          A brief review about gridded data-sets developed for the Peruvian domain.
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">Peru</div>
-                <div class="quarto-category">Datasets</div>
+                <div class="quarto-category">Data-sets</div>
                 <div class="quarto-category">PISCO</div>
                 <div class="quarto-category">RAIN4PE</div>
               </div>
@@ -160,14 +159,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#gridded-hydro-meteorological-data-for-peru" id="toc-gridded-hydro-meteorological-data-for-peru" class="nav-link active" data-scroll-target="#gridded-hydro-meteorological-data-for-peru">Gridded Hydro-meteorological Data for Peru</a>
-  <ul class="collapse">
-  <li><a href="#the-pisco-product" id="toc-the-pisco-product" class="nav-link" data-scroll-target="#the-pisco-product">The PISCO product</a></li>
+  <li><a href="#the-pisco-product" id="toc-the-pisco-product" class="nav-link active" data-scroll-target="#the-pisco-product">The PISCO product</a></li>
   <li><a href="#the-rain4pe-product" id="toc-the-rain4pe-product" class="nav-link" data-scroll-target="#the-rain4pe-product">The RAIN4PE product</a></li>
   <li><a href="#what-is-the-netcdf-format" id="toc-what-is-the-netcdf-format" class="nav-link" data-scroll-target="#what-is-the-netcdf-format">What is the NetCDF format?</a></li>
-  <li><a href="#how-to-access-data" id="toc-how-to-access-data" class="nav-link" data-scroll-target="#how-to-access-data">How to access data?</a></li>
+  <li><a href="#how-to-access-data-sets" id="toc-how-to-access-data-sets" class="nav-link" data-scroll-target="#how-to-access-data-sets">How to access data-sets?</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -177,16 +173,14 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="gridded-hydro-meteorological-data-for-peru" class="level1">
-<h1>Gridded Hydro-meteorological Data for Peru</h1>
-<p>Ground hydrometeorological observations are space-time limited in countries such as Peru. This data scarcity context impulses the use of Satellite Precipitation Products (SPP) in hydrological applications. SPPs provide gridded estimations of meteorological variables such as precipitation and air temperature with high temporal and spatial resolution. However; due to the biases of SPPs, merging of ground information (gauges) and SPPs - using geostatistical techniques - might increase the representation of these variables in the whole country as is shown in the following figure.</p>
+<p>Ground hydro-meteorological observations are space-time limited in countries such as Peru. This data scarcity context impulses the use of Satellite Precipitation Products (SPP) in hydrological applications. SPPs provide gridded estimations of meteorological variables such as precipitation and air temperature with high temporal and spatial resolution. However; due to SPP biases, merging of ground information (gauges) and satellite information - using geostatistical techniques - might increase the representation of these variables in the whole country as is shown in the following figure.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="rainfall.png" class="img-fluid figure-img" width="500"></p>
-<figcaption class="figure-caption">Daily rainfall rates [mm/d] for the Peruvian territory from PISCO product.</figcaption>
+<p></p><figcaption class="figure-caption">Daily rainfall rates [mm/d] for the Peruvian territory from PISCO product.</figcaption><p></p>
 </figure>
 </div>
-<p>Here, we describe gridded datasets built for the Peruvian territory:<br>
+<p>Here, we describe gridded data-sets built for the Peruvian territory:<br>
 <br>
 </p>
 <hr>
@@ -197,14 +191,14 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/piscop_flowchart.png" class="img-fluid figure-img" width="500"></p>
-<figcaption class="figure-caption">Schematic framework of the PISCOP sub-product (version 2.1). Source: Aybar et al.&nbsp;(2020).</figcaption>
+<p></p><figcaption class="figure-caption">Schematic framework of the PISCOP sub-product (version 2.1). Source: Aybar et al.&nbsp;(2020).</figcaption><p></p>
 </figure>
 </div>
 <p>Similarly, PISCO<sub>TA</sub> (Huerta et al., 2018) is obtained from: a) time series of maximum and minimum air temperature data, (b) a soil temperature product from the MODIS sensor (Moderate Resolution Imaging Spectroradiometer), and (c) geographic predictors (e.g., elevation, longitude, latitude and Topographic Dissection Index). Recently, the new PISCO<sub>PE</sub> sub-product (Huerta et al., 2022) has been generated following the Penman-Monteith equation and has a ~1km spatial resolution.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/piscota_flowchart.png" class="img-fluid figure-img" width="500"></p>
-<figcaption class="figure-caption">Schematic framework of the PISCOPE sub-product (version 2.1). Source: Huerta et al.&nbsp;(2022).</figcaption>
+<p></p><figcaption class="figure-caption">Schematic framework of the PISCOPE sub-product (version 2.1). Source: Huerta et al.&nbsp;(2022).</figcaption><p></p>
 </figure>
 </div>
 <p><br>
@@ -213,11 +207,11 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="the-rain4pe-product" class="level3">
 <h3 class="anchored" data-anchor-id="the-rain4pe-product">The RAIN4PE product</h3>
-<p>According to the POTSDAM INSTITUTE FOR CLIMATE IMPACT RESEARCH (<a href="https://www.pik-potsdam.de/en">PIK</a>), RAIN4PE (Fernandez-Palomino et al., 2021) is a novel daily gridded precipitation dataset obtained by merging multi-source precipitation data (satellite-based Climate Hazards Group InfraRed Precipitation, CHIRP (Funk et al.&nbsp;2015), reanalysis ERA5 (Hersbach et al.&nbsp;2020), and ground-based precipitation) with terrain elevation using the random forest regression method. Furthermore, RAIN4PE is hydrologically corrected using streamflow data in catchments with precipitation underestimation through reverse hydrology. Hence, RAIN4PE is the only gridded precipitation product for Peru and Ecuador, which benefits from maximum available in-situ observations, multiple precipitation sources, elevation data, and is supplemented by streamflow data to correct the precipitation underestimation over páramos and montane catchments.</p>
+<p>According to the POTSDAM INSTITUTE FOR CLIMATE IMPACT RESEARCH (<a href="https://www.pik-potsdam.de/en">PIK</a>), RAIN4PE (Fernandez-Palomino et al., 2021) is a novel daily gridded precipitation data-set obtained by merging multi-source precipitation data (satellite-based Climate Hazards Group InfraRed Precipitation, CHIRP (Funk et al.&nbsp;2015), reanalysis ERA5 (Hersbach et al.&nbsp;2020), and ground-based precipitation) with terrain elevation using the random forest regression method. Furthermore, RAIN4PE is hydrologically corrected using streamflow data in catchments with precipitation underestimation through reverse hydrology. Hence, RAIN4PE is the only gridded precipitation product for Peru and Ecuador, which benefits from maximum available in-situ observations, multiple precipitation sources, elevation data, and is supplemented by streamflow data to correct the precipitation underestimation over páramos and montane catchments.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/rain4pe_flowchart.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Schematic framework of the RAIN4PE product. Source: Fernandez et al.&nbsp;(2022).</figcaption>
+<p></p><figcaption class="figure-caption">Schematic framework of the RAIN4PE product. Source: Fernandez et al.&nbsp;(2022).</figcaption><p></p>
 </figure>
 </div>
 <p>The RAIN4PE data are available for the terrestrial land surface between 19°S-2°N and 82-67°W, at 0.1° spatial and daily temporal resolution from 1981 to 2015. The precipitation dataset is provided in netCDF format.<br>
@@ -227,21 +221,22 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="what-is-the-netcdf-format" class="level3">
 <h3 class="anchored" data-anchor-id="what-is-the-netcdf-format">What is the NetCDF format?</h3>
-<p>The Network Common Data Form (NetCDF) is a data format for storing multidimensional (variables) scientific data. There are large number of software and libraries to read netCDF files such as <a href="https://www.giss.nasa.gov/tools/panoply/">Panoply</a> software, the <a href="https://cran.r-project.org/web/packages/ncdf4/ncdf4.pdf">ncdf4</a> R package, or the <a href="https://unidata.github.io/netcdf4-python/">netCDF4</a> package in python.</p>
+<p>The Network Common Data Form (NetCDF) is a format for the storage of multidimensional (variables) scientific data. There are large number of softwares and libraries to read netCDF files such as <a href="https://www.giss.nasa.gov/tools/panoply/">Panoply</a> software, the <a href="https://cran.r-project.org/web/packages/ncdf4/ncdf4.pdf">ncdf4</a> R package, or the <a href="https://unidata.github.io/netcdf4-python/">netCDF4</a> package in python.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="https://www.guillaumedueymes.com/courses/tutorial_python_netcdf/1-netcdf_tutorial/"><img src="images/netcdf.png" class="img-fluid figure-img" width="500"></a></p>
-<figcaption class="figure-caption">Structure of a netCDF file. Source: www.guillaumedueymes.com.</figcaption>
+<p></p><figcaption class="figure-caption">Structure of a netCDF file. Source: www.guillaumedueymes.com.</figcaption><p></p>
 </figure>
 </div>
-<p>The <strong>PISCO</strong> and <strong>RAIN4PE</strong> datasets are available in netCDF format, and consider one variable (precipitation, air temperature, or evapotranspiration) and three dimensions (longitude, latitude and time).<br>
+<p>The <strong>PISCO</strong> and <strong>RAIN4PE</strong> data-sets are available in the netCDF format, and consider one variable (precipitation, air temperature, or evapotranspiration) and three dimensions (longitude, latitude and time).<br>
 <br>
 </p>
 <hr>
 </section>
-<section id="how-to-access-data" class="level3">
-<h3 class="anchored" data-anchor-id="how-to-access-data">How to access data?</h3>
-<p>Theses datasets could be downloaded from <a href="https://drive.google.com/drive/folders/1qrV_1bqaeuoXt0vCBTahaRGBFDIOt1vR?usp=sharing">Drive</a>. In case of the PISCO<sub>PE</sub> sub-product, data of 1 km resolution must be downloaded from <a href="https://doi.org/10.6084/m9.figshare.c.5633182.v3">figshare</a>.</p>
+<section id="how-to-access-data-sets" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-access-data-sets">How to access data-sets?</h3>
+<p>These data-sets could be downloaded from <a href="https://drive.google.com/drive/folders/1qrV_1bqaeuoXt0vCBTahaRGBFDIOt1vR?usp=sharing">Drive</a>. Filenames follows the format “productname_timevariable_version.nc”, where timevariable field is described as <strong>d</strong> = daily timestep; <strong>m</strong> = monthly timestep, <strong>pr</strong> = precipitation, <strong>tn</strong> = minimum air temperature; and <strong>tx</strong> = maximum air temperature.</p>
+<p>In case of the PISCO<sub>PE</sub> sub-product, data of 1 km resolution must be downloaded from <a href="https://doi.org/10.6084/m9.figshare.c.5633182.v3">figshare</a>.</p>
 <p><br>
 </p>
 <hr>
@@ -256,11 +251,10 @@ ul.task-list li input[type="checkbox"] {
 
 
 </section>
-</section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{llauca2023,
   author = {Llauca, Harold},
-  title = {Gridded {Hydro-meteorological} {Data} for {Peru}},
+  title = {Gridded Hydro-Meteorological Data for {Peru}},
   date = {2023-06-04},
   url = {https://hllauca.github.io/posts/2023-06-04-quarto-blogs/},
   langid = {en}

@@ -1,12 +1,12 @@
 ---
-title: "Gridded Hydro-meteorological Data for Peru"
-description: "A brief review about gridded datasets constructed for Peruvian domain."
+title: "Gridded hydro-meteorological data for Peru"
+description: "A brief review about gridded data-sets developed for the Peruvian domain."
 author:
   - name: Harold Llauca
     url: https://hllauca.github.io/
     orcid: 0000-0001-7462-2548
 date: 06-04-2023
-categories: [Peru, Datasets, PISCO, RAIN4PE] # self-defined categories
+categories: [Peru, Data-sets, PISCO, RAIN4PE] # self-defined categories
 citation: 
   url: https://hllauca.github.io/posts/2023-06-04-quarto-blogs/ 
 image: rainfall.png
@@ -14,13 +14,11 @@ draft: false # setting this to `true` will prevent your post from appearing on y
 bibliography: references.bib
 ---
 
-# Gridded Hydro-meteorological Data for Peru
-
-Ground hydrometeorological observations are space-time limited in countries such as Peru. This data scarcity context impulses the use of Satellite Precipitation Products (SPP) in hydrological applications. SPPs provide gridded estimations of meteorological variables such as precipitation and air temperature with high temporal and spatial resolution. However; due to the biases of SPPs, merging of ground information (gauges) and SPPs - using geostatistical techniques - might increase the representation of these variables in the whole country as is shown in the following figure.
+Ground hydro-meteorological observations are space-time limited in countries such as Peru. This data scarcity context impulses the use of Satellite Precipitation Products (SPP) in hydrological applications. SPPs provide gridded estimations of meteorological variables such as precipitation and air temperature with high temporal and spatial resolution. However; due to SPP biases, merging of ground information (gauges) and satellite information - using geostatistical techniques - might increase the representation of these variables in the whole country as is shown in the following figure.
 
 ![Daily rainfall rates \[mm/d\] for the Peruvian territory from PISCO product.](rainfall.png){fig-align="center" width="500"}
 
-Here, we describe gridded datasets built for the Peruvian territory:\
+Here, we describe gridded data-sets built for the Peruvian territory:\
 \
 
 ------------------------------------------------------------------------
@@ -43,7 +41,7 @@ Similarly, PISCO~TA~ (Huerta et al., 2018) is obtained from: a) time series of m
 
 ### The RAIN4PE product
 
-According to the POTSDAM INSTITUTE FOR CLIMATE IMPACT RESEARCH ([PIK](https://www.pik-potsdam.de/en)), RAIN4PE (Fernandez-Palomino et al., 2021) is a novel daily gridded precipitation dataset obtained by merging multi-source precipitation data (satellite-based Climate Hazards Group InfraRed Precipitation, CHIRP (Funk et al. 2015), reanalysis ERA5 (Hersbach et al. 2020), and ground-based precipitation) with terrain elevation using the random forest regression method. Furthermore, RAIN4PE is hydrologically corrected using streamflow data in catchments with precipitation underestimation through reverse hydrology. Hence, RAIN4PE is the only gridded precipitation product for Peru and Ecuador, which benefits from maximum available in-situ observations, multiple precipitation sources, elevation data, and is supplemented by streamflow data to correct the precipitation underestimation over páramos and montane catchments.
+According to the POTSDAM INSTITUTE FOR CLIMATE IMPACT RESEARCH ([PIK](https://www.pik-potsdam.de/en)), RAIN4PE (Fernandez-Palomino et al., 2021) is a novel daily gridded precipitation data-set obtained by merging multi-source precipitation data (satellite-based Climate Hazards Group InfraRed Precipitation, CHIRP (Funk et al. 2015), reanalysis ERA5 (Hersbach et al. 2020), and ground-based precipitation) with terrain elevation using the random forest regression method. Furthermore, RAIN4PE is hydrologically corrected using streamflow data in catchments with precipitation underestimation through reverse hydrology. Hence, RAIN4PE is the only gridded precipitation product for Peru and Ecuador, which benefits from maximum available in-situ observations, multiple precipitation sources, elevation data, and is supplemented by streamflow data to correct the precipitation underestimation over páramos and montane catchments.
 
 ![Schematic framework of the RAIN4PE product. Source: Fernandez et al. (2022).](images/rain4pe_flowchart.png){fig-align="center"}
 
@@ -54,18 +52,20 @@ The RAIN4PE data are available for the terrestrial land surface between 19°S-2�
 
 ### What is the NetCDF format?
 
-The Network Common Data Form (NetCDF) is a data format for storing multidimensional (variables) scientific data. There are large number of software and libraries to read netCDF files such as [Panoply](https://www.giss.nasa.gov/tools/panoply/) software, the [ncdf4](https://cran.r-project.org/web/packages/ncdf4/ncdf4.pdf) R package, or the [netCDF4](https://unidata.github.io/netcdf4-python/) package in python.
+The Network Common Data Form (NetCDF) is a format for the storage of multidimensional (variables) scientific data. There are large number of softwares and libraries to read netCDF files such as [Panoply](https://www.giss.nasa.gov/tools/panoply/) software, the [ncdf4](https://cran.r-project.org/web/packages/ncdf4/ncdf4.pdf) R package, or the [netCDF4](https://unidata.github.io/netcdf4-python/) package in python.
 
 [![Structure of a netCDF file. Source: www.guillaumedueymes.com.](images/netcdf.png){fig-align="center" width="500"}](https://www.guillaumedueymes.com/courses/tutorial_python_netcdf/1-netcdf_tutorial/)
 
-The **PISCO** and **RAIN4PE** datasets are available in netCDF format, and consider one variable (precipitation, air temperature, or evapotranspiration) and three dimensions (longitude, latitude and time).\
+The **PISCO** and **RAIN4PE** data-sets are available in the netCDF format, and consider one variable (precipitation, air temperature, or evapotranspiration) and three dimensions (longitude, latitude and time).\
 \
 
 ------------------------------------------------------------------------
 
-### How to access data?
+### How to access data-sets?
 
-Theses datasets could be downloaded from [Drive](https://drive.google.com/drive/folders/1qrV_1bqaeuoXt0vCBTahaRGBFDIOt1vR?usp=sharing). In case of the PISCO~PE~ sub-product, data of 1 km resolution must be downloaded from [figshare](https://doi.org/10.6084/m9.figshare.c.5633182.v3).
+These data-sets could be downloaded from [Drive](https://drive.google.com/drive/folders/1qrV_1bqaeuoXt0vCBTahaRGBFDIOt1vR?usp=sharing). Filenames follows the format "productname_timevariable_version.nc", where timevariable field is described as **d** = daily timestep; **m** = monthly timestep, **pr** = precipitation, **tn** = minimum air temperature; and **tx** = maximum air temperature.
+
+In case of the PISCO~PE~ sub-product, data of 1 km resolution must be downloaded from [figshare](https://doi.org/10.6084/m9.figshare.c.5633182.v3).
 
 \
 

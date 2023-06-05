@@ -10,5 +10,14 @@
   },
   "resources.qmd": {
     "resources.html": "988ef175"
+  },
+  "posts/2023-06-04-quarto-blogs/index.qmd": {
+    "index.html": "fb064b44"
+  },
+  "posts/2023-05-15-quarto-blogs/index.qmd": {
+    "index.html": "621863e6"
+  },
+  "posts.qmd": {
+    "posts.html": "dbdd3d47"
   }
 }
