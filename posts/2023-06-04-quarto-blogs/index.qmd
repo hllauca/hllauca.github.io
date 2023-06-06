@@ -12,6 +12,16 @@ citation:
 image: rainfall.png
 draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
 bibliography: references.bib
+filters:
+  - social-share
+share:
+  permalink: "https://hllauca.github.io/posts/2023-06-04-quarto-blogs/"
+  description: "Gridded hydro-meteorological data for Peru"
+  twitter: true
+  facebook: true
+  reddit: true
+  linkedin: true
+  email: true
 ---
 
 Ground hydro-meteorological observations are space-time limited in countries such as Peru. This data scarcity context impulses the use of Satellite Precipitation Products (SPP) in hydrological applications. SPPs provide gridded estimations of meteorological variables such as precipitation and air temperature with high temporal and spatial resolution. However; due to SPP biases, merging of ground information (gauges) and satellite information - using geostatistical techniques - might increase the representation of these variables in the whole country as is shown in the following figure.

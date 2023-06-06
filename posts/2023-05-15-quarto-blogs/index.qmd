@@ -11,6 +11,14 @@ citation:
   url: https://hllauca.github.io/posts/2023-05-15-quarto-blogs/ 
 image: courses.jpeg
 draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+share:
+  permalink: "https://hllauca.github.io/posts/2023-05-15-quarto-blogs/"
+  description: "Training courses in Hydrology topics"
+  twitter: true
+  facebook: true
+  reddit: true
+  linkedin: true
+  email: true
 ---
 
 # **R aplicado a la Hidrología - Julio 2023 \[Inscripciones abiertas\]**
