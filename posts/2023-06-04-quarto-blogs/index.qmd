@@ -77,6 +77,8 @@ These data-sets could be downloaded from [Drive](https://drive.google.com/drive/
 
 In case of the PISCO~PE~ sub-product, data of 1 km resolution must be downloaded from [figshare](https://doi.org/10.6084/m9.figshare.c.5633182.v3).
 
+![Scheme of current gridded hydro-meteorological data-sets for Peru](images/GHMDP-01.png){fig-align="center" width="1500"}
+
 \
 
 ------------------------------------------------------------------------
