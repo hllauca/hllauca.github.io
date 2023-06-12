@@ -19,5 +19,8 @@
   },
   "posts.qmd": {
     "posts.html": "dbdd3d47"
+  },
+  "posts/2023-06-12-quarto-blogs/index.qmd": {
+    "index.html": "4a4a834b"
   }
 }

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Harold Llauca">
+<meta name="dcterms.date" content="2023-06-12">
+<meta name="description" content="Basis for modeling and constraining garbage outputs">
+
+<title>Harold Llauca - How to calibrate hydrological models?</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../rocket-takeoff-fill.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/social-share-0.1.0/social-share.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/social-share-0.1.0/all.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Harold Llauca</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">Profile</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publications.html" rel="" target="">
+ <span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../resources.html" rel="" target="">
+ <span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">How to calibrate hydrological models?</h1>
+                  <div>
+        <div class="description">
+          Basis for modeling and constraining garbage outputs
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Hydrological modeling</div>
+                <div class="quarto-category">Data-science</div>
+                <div class="quarto-category">R programming</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p><a href="https://hllauca.github.io/">Harold Llauca</a> <a href="https://orcid.org/0000-0001-7462-2548" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">June 12, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#model-optimization" id="toc-model-optimization" class="nav-link active" data-scroll-target="#model-optimization">Model optimization</a></li>
+  <li><a href="#optimization-algorithms" id="toc-optimization-algorithms" class="nav-link" data-scroll-target="#optimization-algorithms">Optimization algorithms</a></li>
+  <li><a href="#calibration-or-validation" id="toc-calibration-or-validation" class="nav-link" data-scroll-target="#calibration-or-validation">Calibration or validation?</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>Models aim to represent hydrological systems using different kinds of mathematical simplifications (e.g.&nbsp;physical-based, conceptual, empirical) or spatial discretization approaches (distributed, semi-distributed, lumped). These models are capable of anticipating system response (e.g.&nbsp;in terms of water discharges) from forcing changes (e.g.&nbsp;precipitation). However, system uncertainties are implicit in the model from different sources such as model forcings (u), parameters (θ), states (X), structure (M), or outputs (Y), as described by Liu &amp; Gupta (2011). Also, model uncertainties directly impact streamflow simulation due to error propagation throw the model system - from inputs to outputs - as is shown in the following equation:<br>
+&nbsp;<span class="math display">\[
+Y = M(u,X,θ)
+\]</span></p>
+<p><br>
+In that context, model calibration techniques help to reduce parameter uncertainties and improve the streamflow representation.<br>
+</p>
+<hr>
+<section id="model-optimization" class="level3">
+<h3 class="anchored" data-anchor-id="model-optimization">Model optimization</h3>
+<p>The main focus of the model optimization procedure is to reduce errors between observed and simulated responses of the hydrological system throw parameter modification as described by Vrugt et al.&nbsp;(2013).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/system.PNG" class="img-fluid figure-img" width="600"></p>
+<p></p><figcaption class="figure-caption">Schematic overview of the model calibration problem. Source: Vrugt et al.&nbsp;(2013).</figcaption><p></p>
+</figure>
+</div>
+<p><br>
+This objective might be explained by a <strong>minimization problem</strong>, where the cost function <em>J</em> represents errors (<span class="math inline">\(\varepsilon\)</span>) between simulations (<em>Ysim</em>) and observations (<em>Yobs</em>) as described in the following equation:<br>
+<br>
+<span class="math display">\[
+minJ = \varepsilon_{(Ysim - Yobs)}
+\]</span></p>
+<p><br>
+The cost function is commonly named the <strong>Objective Function</strong> (<em>OF</em>) and <em>J</em> might be expressed in terms of some statistical metrics such as the Root Mean Square Error (<em>RMSE</em>), where <em>n</em> represent the length of the time series and <em>i</em> the step.<br>
+&nbsp;</p>
+<p><span class="math display">\[
+minOF = minRMSE = \sqrt{\frac{1}{n}\sum_{i}^{n}\left ( Y_{sim} - Y_{obs} \right )^2}
+\]</span></p>
+<p><br>
+There are other statistical metrics used in model calibration such as the popular Nash-Sutcliffe (<em>NSE</em>) or the Kling and Gupta (<em>KGE</em>) efficiency criterion. In both cases, higher values near 1 indicate a very good adjustment of simulations to observations, so the <em>OF</em> should be expressed as a maximization problem or a minimization problem of the negative metrics as follows:<br>
+&nbsp;&nbsp;<span class="math display">\[
+maxNSE = min(-1*NSE) = min(\frac{\sum_{i=1}^{n}(Y_{sim,i}-Y_{obs,i})^2)}{\sum_{i=1}^{n}(Y_{obs,i}-\bar{Y_{obs}})^2)})
+\]</span><br>
+</p>
+<p><span class="math display">\[
+maxKGE = min(-1*KGE) = min(\sqrt{(r-1)^2+(\frac{\sigma _{sim}}{\sigma _{obs}}-1)^2+(\frac{\mu _{sim}}{\mu _{obs}}-1)^2})
+\]</span></p>
+<p><br>
+Statistical metrics help to quantify the agreements between observed and calculated discharges. For example, Ferreira et al.&nbsp;(2020) evaluate 36 OF proposed in the literature and confirm that each metric should be interpreted specifically thinking about the aspects it has been proposed for (e.g.&nbsp;such as for low-flows, high-flows, etc). Also, a set of goodness-of-fit functions for comparison of simulated and observed hydrological time series could be found in the <a href="https://cran.r-project.org/web/packages/hydroGOF/index.html">hydroGOF</a> package.</p>
+<p>Mono-objective methods solve an optimization problem with a unique objective function as shown above. Hence, they might contain more than one metric using a linear expression of metrics and weights:<br>
+&nbsp;</p>
+<p><span class="math display">\[
+minOF = a*RMSE - b*NSE - c*KGE
+\]</span></p>
+<p><br>
+Also, multi-objective optimizations have been tested in hydrological modeling calibration to include more than a unique objective function with a Pareto optimization approach. For instance, Yeste et al.&nbsp;(2023) compare multi- and mono-objective calibration algorithms to integrate streamflow (Q) and evaporation (E) data in hydrological modeling.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/multiobjective-01.PNG" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption">Multi-objective calibration. Source: Yeste et al.&nbsp;(2023).</figcaption><p></p>
+</figure>
+</div>
+<hr>
+</section>
+<section id="optimization-algorithms" class="level3">
+<h3 class="anchored" data-anchor-id="optimization-algorithms">Optimization algorithms</h3>
+<p>Searching for the set of optimal model parameters might be an overwhelming task. The Shuffle Complex Evolutionary (SCE) algorithm is one of the most popular functions for mono-objective and global automatic calibration of hydrological model parameters. According to Duan et al.&nbsp;(1993), the SCE method is based on a synthesis of four concepts that have proved successful for global optimization: (a) combination of probabilistic and deterministic approaches; (b) clustering; (c) systematic evolution of a complex of points spanning the space, in the direction of global improvement; and (d) competitive evolution.</p>
+<p>The following list presents some available functions and packages available in the R language programming:</p>
+<ul>
+<li><p><a href="https://www.rdocumentation.org/packages/rtop/versions/0.6-6/topics/sceua">sceua</a>: Mono-objective calibration function using the Shuffle Complex Evolutionary (SCE) algorithm.</p></li>
+<li><p><a href="https://www.rdocumentation.org/packages/hydroPSO/versions/0.3-1-1/topics/hydroPSO">hydroPSO</a>: Enhanced Particle Swarm Optimisation (PSO) algorithm.</p></li>
+<li><p><a href="https://www.rdocumentation.org/packages/GA/versions/3.2.3/topics/ga">ga</a>: Maximization of a fitness function using Genetic Algorithms (GA).</p></li>
+<li><p><a href="https://r-forge.r-project.org/projects/dream">dream</a>: DiffeRential Evolution Adaptive Metropolis (DREAM). Efficient global MCMC even in high-dimensional spaces.</p></li>
+<li><p><a href="https://www.rdocumentation.org/packages/nsga2R/versions/1.1/topics/nsga2R">nsga2R</a>: Multi-objective calibration with the R Based Non-dominated Sorting Genetic Algorithm II.</p></li>
+<li><p><a href="https://cran.r-project.org/web/packages/rmoo/index.html">rmoo</a>: Framework for multi- and many-objective optimization, which allows researchers and users versatility in parameter configuration, as well as tools for analysis, replication, and visualization of results.</p></li>
+<li><p><a href="https://github.com/fzao/caRamel">caRamel</a>: R package for optimization implementing a multiobjective evolutionary algorithm combining the MEAS algorithm and the NGSA-II algorithm.</p></li>
+<li><p><a href="https://cran.r-project.org/web/packages/GPareto/index.html">GPareto</a>: Multi-objective Expected Improvement and Step-wise Uncertainty Reduction sequential infill criteria.<br>
+<br>
+</p></li>
+</ul>
+<hr>
+</section>
+<section id="calibration-or-validation" class="level3">
+<h3 class="anchored" data-anchor-id="calibration-or-validation">Calibration or validation?</h3>
+<p>Hydrological models require the development of two main steps before their operation. The <strong>calibration</strong> step consists of the selection of a window period where optimal model parameters are identified throw the procedure described lines above, while the <strong>validation</strong> step is about the use of these optimal parameters set in a new non-tested time window. In that sense, the assessment of model performance - using different statistical metrics - is computed during calibration and validation periods.<br>
+</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/model_calib.PNG" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption">Calibrated and validated streamflow time series in a lumped hydrological model.</figcaption><p></p>
+</figure>
+</div>
+<p>The <strong>warm-up</strong> period is a previous step inside the model calibration used to reduce initial condition uncertainties. For instance, in daily models, the first-year calibration model period is discarded from the OF and statistical performance metrics to make model outputs independent from initial model states.<br>
+</p>
+<hr>
+</section>
+<section id="references" class="level3">
+<h3 class="anchored" data-anchor-id="references">References</h3>
+<p>Duan, Q. Y., V. K. Gupta, and S. Sorooshian. 1993. “Shuffled Complex Evolution Approach for Effective and Efficient Global Minimization.” <em>Journal of Optimization Theory and Applications</em> 76 (3): 501–21. <a href="https://doi.org/10.1007/BF00939380" class="uri">https://doi.org/10.1007/BF00939380</a>.</p>
+<p>Ferreira, Paloma Mara de Lima, Adriano Rolim da Paz, and Juan Martín Bravo. 2020. “Objective Functions Used as Performance Metrics for Hydrological Models: State-of-the-Art and Critical Analysis.” <em>RBRH</em> 25. <a href="https://doi.org/10.1590/2318-0331.252020190155" class="uri">https://doi.org/10.1590/2318-0331.252020190155</a>.</p>
+<p>Liu, Yuqiong, and Hoshin V. Gupta. 2007. “Uncertainty in Hydrologic Modeling: Toward an Integrated Data Assimilation Framework.” <em>Water Resources Research</em> 43 (7): 160. <a href="https://doi.org/10.1029/2006WR005756" class="uri">https://doi.org/10.1029/2006WR005756</a>.</p>
+<p>Vrugt, Jasper A., Cajo J. F. ter Braak, Cees G. H. Diks, and Gerrit Schoups. 2013. “Hydrologic Data Assimilation Using Particle Markov Chain Monte Carlo Simulation: Theory, Concepts and Applications.” <em>Advances in Water Resources</em> 51 (January): 457–78. <a href="https://doi.org/10.1016/j.advwatres.2012.04.002" class="uri">https://doi.org/10.1016/j.advwatres.2012.04.002</a>.</p>
+<p>Yeste, Patricio, Lieke A. Melsen, Matilde García-Valdecasas Ojeda, Sonia R. Gámiz-Fortis, Yolanda Castro-Díez, and María Jesús Esteban-Parra. 2023. “A Pareto‐based Sensitivity Analysis and Multiobjective Calibration Approach for Integrating Streamflow and Evaporation Data.” <em>Water Resources Research</em> 59 (6). <a href="https://doi.org/10.1029/2022wr033235" class="uri">https://doi.org/10.1029/2022wr033235</a>.</p>
+<p><br>
+</p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{llauca2023,
+  author = {Llauca, Harold},
+  title = {How to Calibrate Hydrological Models?},
+  date = {2023-06-12},
+  url = {https://hllauca.github.io/posts/2023-06-12-quarto-blogs/},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-llauca2023" class="csl-entry quarto-appendix-citeas" role="listitem">
+Llauca, Harold. 2023. <span>“How to Calibrate Hydrological
+Models?”</span> June 12, 2023. <a href="https://hllauca.github.io/posts/2023-06-12-quarto-blogs/">https://hllauca.github.io/posts/2023-06-12-quarto-blogs/</a>.
+</div></div></section></div></main> <!-- /main -->
+<script src="https://utteranc.es/client.js" repo="hllauca/hllauca.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<div class="page-columns page-rows-contents page-layout-article"><div class="social-share"><a href="https://twitter.com/share?url=https://hllauca.github.io/posts/2023-06-12-quarto-blogs/&amp;text=How to calibrate hydrological models?" target="_blank" class="twitter"><i class="fab fa-twitter fa-fw fa-lg"></i></a><a href="https://www.linkedin.com/shareArticle?url=https://hllauca.github.io/posts/2023-06-12-quarto-blogs/&amp;title=How to calibrate hydrological models?" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin-in fa-fw fa-lg"></i></a>  <a href="mailto:?subject=How to calibrate hydrological models?&amp;body=Check out this link:https://hllauca.github.io/posts/2023-06-12-quarto-blogs/" target="_blank" class="email"><i class="fa-solid fa-envelope fa-fw fa-lg"></i></a><a href="https://www.facebook.com/sharer.php?u=https://hllauca.github.io/posts/2023-06-12-quarto-blogs/" target="_blank" class="facebook"><i class="fab fa-facebook-f fa-fw fa-lg"></i></a><a href="https://reddit.com/submit?url=https://hllauca.github.io/posts/2023-06-12-quarto-blogs/&amp;title=How to calibrate hydrological models?" target="_blank" class="reddit">   <i class="fa-brands fa-reddit-alien fa-fw fa-lg"></i></a></div></div>
+
+
+
+</body></html>
