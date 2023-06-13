@@ -6,7 +6,7 @@ author:
     url: https://hllauca.github.io/
     orcid: 0000-0001-7462-2548
 date: 05-15-2023
-categories: [Peru, R programming, Hydrological Modeling, Climate Change] # self-defined categories
+categories: [Peru, R programming, Data-Science, Hydrological Modeling, Climate Change] # self-defined categories
 citation: 
   url: https://hllauca.github.io/posts/2023-05-15-quarto-blogs/ 
 image: courses.jpeg

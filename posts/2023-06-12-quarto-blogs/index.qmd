@@ -6,7 +6,7 @@ author:
     url: https://hllauca.github.io/
     orcid: 0000-0001-7462-2548
 date: 06-12-2023
-categories: [Hydrological modeling, Data-science, R programming] # self-defined categories
+categories: [Hydrological Modeling, Data-Science, R programming] # self-defined categories
 citation: 
   url: https://hllauca.github.io/posts/2023-06-12-quarto-blogs/ 
 image: calibration.jpeg
@@ -52,13 +52,13 @@ The cost function is commonly named the **Objective Function** (*OF*) and *J* mi
  
 
 $$
-minOF = minRMSE = \sqrt{\frac{1}{n}\sum_{i}^{n}\left ( Y_{sim} - Y_{obs} \right )^2}
+minOF = minRMSE = min(\sqrt{\frac{1}{n}\sum_{i}^{n}\left ( Y_{sim} - Y_{obs} \right )^2})
 $$
 
 \
 There are other statistical metrics used in model calibration such as the popular Nash-Sutcliffe (*NSE*) or the Kling and Gupta (*KGE*) efficiency criterion. In both cases, higher values near 1 indicate a very good adjustment of simulations to observations, so the *OF* should be expressed as a maximization problem or a minimization problem of the negative metrics as follows:\
   $$
-maxNSE = min(-1*NSE) = min(\frac{\sum_{i=1}^{n}(Y_{sim,i}-Y_{obs,i})^2)}{\sum_{i=1}^{n}(Y_{obs,i}-\bar{Y_{obs}})^2)})
+maxNSE = min(-1*NSE) = min(\frac{\sum_{i=1}^{n}(Y_{sim,i}-Y_{obs,i})^2}{\sum_{i=1}^{n}(Y_{obs,i}-\bar{Y_{obs}})^2})
 $$\
 
 $$
