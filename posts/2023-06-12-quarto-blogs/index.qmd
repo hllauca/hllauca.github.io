@@ -24,9 +24,9 @@ share:
   email: true
 ---
 
-Models aim to represent hydrological systems using different kinds of mathematical simplifications (e.g. physical-based, conceptual, empirical) or spatial discretization approaches (distributed, semi-distributed, lumped). These models are capable of anticipating system response (e.g. in terms of water discharges) from forcing changes (e.g. precipitation). However, system uncertainties are implicit in the model from different sources such as model forcings (u), parameters (θ), states (X), structure (M), or outputs (Y), as described by Liu & Gupta (2011). Also, model uncertainties directly impact streamflow simulation due to error propagation throw the model system - from inputs to outputs - as is shown in the following equation:\
+Models aim to represent hydrological systems using different kinds of mathematical simplifications (e.g. physical-based, conceptual, empirical) or spatial discretization approaches (distributed, semi-distributed, lumped). These models are capable of anticipating system response (e.g. in terms of water discharges) from forcing changes (e.g. precipitation). However, system uncertainties are implicit in the model from different sources such as: model forcings (u), parameters (θ), states (X), structure (M), or outputs (Y); as described by Liu & Gupta (2011). What is more, model errors ($\varepsilon$) directly impact streamflow simulation due to propagation throw the model system - from inputs to outputs - as is shown in the following equation, where *t* is the time:\
  $$
-Y = M(u,X,θ)
+Y_{t} = M(u_{t},X_{t-1},θ, \varepsilon)
 $$
 
 \

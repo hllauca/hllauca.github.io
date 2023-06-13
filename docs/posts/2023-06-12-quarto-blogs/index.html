@@ -175,9 +175,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Models aim to represent hydrological systems using different kinds of mathematical simplifications (e.g.&nbsp;physical-based, conceptual, empirical) or spatial discretization approaches (distributed, semi-distributed, lumped). These models are capable of anticipating system response (e.g.&nbsp;in terms of water discharges) from forcing changes (e.g.&nbsp;precipitation). However, system uncertainties are implicit in the model from different sources such as model forcings (u), parameters (θ), states (X), structure (M), or outputs (Y), as described by Liu &amp; Gupta (2011). Also, model uncertainties directly impact streamflow simulation due to error propagation throw the model system - from inputs to outputs - as is shown in the following equation:<br>
+<p>Models aim to represent hydrological systems using different kinds of mathematical simplifications (e.g.&nbsp;physical-based, conceptual, empirical) or spatial discretization approaches (distributed, semi-distributed, lumped). These models are capable of anticipating system response (e.g.&nbsp;in terms of water discharges) from forcing changes (e.g.&nbsp;precipitation). However, system uncertainties are implicit in the model from different sources such as: model forcings (u), parameters (θ), states (X), structure (M), or outputs (Y); as described by Liu &amp; Gupta (2011). What is more, model errors (<span class="math inline">\(\varepsilon\)</span>) directly impact streamflow simulation due to propagation throw the model system - from inputs to outputs - as is shown in the following equation, where <em>t</em> is the time:<br>
 &nbsp;<span class="math display">\[
-Y = M(u,X,θ)
+Y_{t} = M(u_{t},X_{t-1},θ, \varepsilon)
 \]</span></p>
 <p><br>
 In that context, model calibration techniques help to reduce parameter uncertainties and improve the streamflow representation.<br>
