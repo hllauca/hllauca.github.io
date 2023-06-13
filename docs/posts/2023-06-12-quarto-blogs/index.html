@@ -8,7 +8,7 @@
 
 <meta name="author" content="Harold Llauca">
 <meta name="dcterms.date" content="2023-06-12">
-<meta name="description" content="Basis for modeling and constraining garbage outputs">
+<meta name="description" content="Bases for modeling hydrological systems and obtain reliable simulations">
 
 <title>Harold Llauca - How to calibrate hydrological models?</title>
 <style>
@@ -122,7 +122,7 @@ ul.task-list li input[type="checkbox"] {
       <h1 class="title">How to calibrate hydrological models?</h1>
                   <div>
         <div class="description">
-          Basis for modeling and constraining garbage outputs
+          Bases for modeling hydrological systems and obtain reliable simulations
         </div>
       </div>
                           <div class="quarto-categories">
@@ -202,7 +202,7 @@ minJ = \varepsilon_{(Ysim - Yobs)}
 The cost function is commonly named the <strong>Objective Function</strong> (<em>OF</em>) and <em>J</em> might be expressed in terms of some statistical metrics such as the Root Mean Square Error (<em>RMSE</em>), where <em>n</em> represent the length of the time series and <em>i</em> the step.<br>
 &nbsp;</p>
 <p><span class="math display">\[
-minOF = minRMSE = min(\sqrt{\frac{1}{n}\sum_{i}^{n}\left ( Y_{sim} - Y_{obs} \right )^2})
+minOF = minRMSE = min(\sqrt{\frac{1}{n}\sum_{i}^{n}\left ( Y_{sim,i} - Y_{obs,i} \right )^2})
 \]</span></p>
 <p><br>
 There are other statistical metrics used in model calibration such as the popular Nash-Sutcliffe (<em>NSE</em>) or the Kling and Gupta (<em>KGE</em>) efficiency criterion. In both cases, higher values near 1 indicate a very good adjustment of simulations to observations, so the <em>OF</em> should be expressed as a maximization problem or a minimization problem of the negative metrics as follows:<br>

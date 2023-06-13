@@ -1,6 +1,6 @@
 ---
 title: "How to calibrate hydrological models?"
-description: "Basis for modeling and constraining garbage outputs"
+description: "Bases for modeling hydrological systems and obtain reliable simulations"
 author:
   - name: Harold Llauca
     url: https://hllauca.github.io/
@@ -52,7 +52,7 @@ The cost function is commonly named the **Objective Function** (*OF*) and *J* mi
  
 
 $$
-minOF = minRMSE = min(\sqrt{\frac{1}{n}\sum_{i}^{n}\left ( Y_{sim} - Y_{obs} \right )^2})
+minOF = minRMSE = min(\sqrt{\frac{1}{n}\sum_{i}^{n}\left ( Y_{sim,i} - Y_{obs,i} \right )^2})
 $$
 
 \
