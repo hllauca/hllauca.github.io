@@ -193,13 +193,13 @@ In that context, model calibration techniques help to reduce parameter uncertain
 </figure>
 </div>
 <p><br>
-This objective might be explained by a <strong>minimization problem</strong>, where the cost function <em>J</em> represents errors (<span class="math inline">\(\varepsilon\)</span>) between simulations (<em>Ysim</em>) and observations (<em>Yobs</em>) as described in the following equation:<br>
+This objective might be explained by a <strong>minimization problem</strong>, where the cost function <em>J</em> represents errors between simulations (<em>Ysim</em>) and observations (<em>Yobs</em>):<br>
 <br>
 <span class="math display">\[
 minJ = \varepsilon_{(Ysim - Yobs)}
 \]</span></p>
 <p><br>
-The cost function is commonly named the <strong>Objective Function</strong> (<em>OF</em>) and <em>J</em> might be expressed in terms of some statistical metrics such as the Root Mean Square Error (<em>RMSE</em>), where <em>n</em> represent the length of the time series and <em>i</em> the step.<br>
+The cost function is commonly named the <strong>Objective Function</strong> (<em>OF</em>) and <em>J</em> might be expressed in terms of some statistical metrics such as the Root Mean Square Error (<em>RMSE</em>), where <em>n</em> represent the length of the time series and <em>i</em> is the time step.<br>
 &nbsp;</p>
 <p><span class="math display">\[
 minOF = minRMSE = min(\sqrt{\frac{1}{n}\sum_{i}^{n}\left ( Y_{sim,i} - Y_{obs,i} \right )^2})
@@ -214,7 +214,7 @@ maxNSE = min(-1*NSE) = min(\frac{\sum_{i=1}^{n}(Y_{sim,i}-Y_{obs,i})^2}{\sum_{i=
 maxKGE = min(-1*KGE) = min(\sqrt{(r-1)^2+(\frac{\sigma _{sim}}{\sigma _{obs}}-1)^2+(\frac{\mu _{sim}}{\mu _{obs}}-1)^2})
 \]</span></p>
 <p><br>
-Statistical metrics help to quantify the agreements between observed and calculated discharges. For example, Ferreira et al.&nbsp;(2020) evaluate 36 OF proposed in the literature and confirm that each metric should be interpreted specifically thinking about the aspects it has been proposed for (e.g.&nbsp;such as for low-flows, high-flows, etc). Also, a set of goodness-of-fit functions for comparison of simulated and observed hydrological time series could be found in the <a href="https://cran.r-project.org/web/packages/hydroGOF/index.html">hydroGOF</a> package.</p>
+Statistical metrics help to quantify the agreements between observed and calculated discharges. For example, Ferreira et al.&nbsp;(2020) evaluate 36 OF proposed in the literature and confirm that each metric should be interpreted specifically thinking about the aspects it has been proposed for (e.g.&nbsp;such as for low-flows, high-flows, etc). Also, a set of goodness-of-fit functions for comparison of simulated and observed hydrological time series could be found in the <a href="https://cran.r-project.org/web/packages/hydroGOF/index.html">hydroGOF</a> R package.</p>
 <p>Mono-objective methods solve an optimization problem with a unique objective function as shown above. Hence, they might contain more than one metric using a linear expression of metrics and weights:<br>
 &nbsp;</p>
 <p><span class="math display">\[
@@ -233,7 +233,7 @@ Also, multi-objective optimizations have been tested in hydrological modeling ca
 <section id="optimization-algorithms" class="level3">
 <h3 class="anchored" data-anchor-id="optimization-algorithms">Optimization algorithms</h3>
 <p>Searching for the set of optimal model parameters might be an overwhelming task. The Shuffle Complex Evolutionary (SCE) algorithm is one of the most popular functions for mono-objective and global automatic calibration of hydrological model parameters. According to Duan et al.&nbsp;(1993), the SCE method is based on a synthesis of four concepts that have proved successful for global optimization: (a) combination of probabilistic and deterministic approaches; (b) clustering; (c) systematic evolution of a complex of points spanning the space, in the direction of global improvement; and (d) competitive evolution.</p>
-<p>The following list presents some available functions and packages available in the R language programming:</p>
+<p>The following list presents some functions and packages available in the R language programming for the optimization of hydrological models:</p>
 <ul>
 <li><p><a href="https://www.rdocumentation.org/packages/rtop/versions/0.6-6/topics/sceua">sceua</a>: Mono-objective calibration function using the Shuffle Complex Evolutionary (SCE) algorithm.</p></li>
 <li><p><a href="https://www.rdocumentation.org/packages/hydroPSO/versions/0.3-1-1/topics/hydroPSO">hydroPSO</a>: Enhanced Particle Swarm Optimisation (PSO) algorithm.</p></li>

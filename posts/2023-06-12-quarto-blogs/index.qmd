@@ -41,14 +41,14 @@ The main focus of the model optimization procedure is to reduce errors between o
 ![Schematic overview of the model calibration problem. Source: Vrugt et al. (2013).](images/system.PNG){width="600"}
 
 \
-This objective might be explained by a **minimization problem**, where the cost function *J* represents errors ($\varepsilon$) between simulations (*Ysim*) and observations (*Yobs*) as described in the following equation:\
+This objective might be explained by a **minimization problem**, where the cost function *J* represents errors between simulations (*Ysim*) and observations (*Yobs*):\
 \
 $$
 minJ = \varepsilon_{(Ysim - Yobs)}
 $$
 
 \
-The cost function is commonly named the **Objective Function** (*OF*) and *J* might be expressed in terms of some statistical metrics such as the Root Mean Square Error (*RMSE*), where *n* represent the length of the time series and *i* the step.\
+The cost function is commonly named the **Objective Function** (*OF*) and *J* might be expressed in terms of some statistical metrics such as the Root Mean Square Error (*RMSE*), where *n* represent the length of the time series and *i* is the time step.\
  
 
 $$
@@ -66,7 +66,7 @@ maxKGE = min(-1*KGE) = min(\sqrt{(r-1)^2+(\frac{\sigma _{sim}}{\sigma _{obs}}-1)
 $$
 
 \
-Statistical metrics help to quantify the agreements between observed and calculated discharges. For example, Ferreira et al. (2020) evaluate 36 OF proposed in the literature and confirm that each metric should be interpreted specifically thinking about the aspects it has been proposed for (e.g. such as for low-flows, high-flows, etc). Also, a set of goodness-of-fit functions for comparison of simulated and observed hydrological time series could be found in the [hydroGOF](https://cran.r-project.org/web/packages/hydroGOF/index.html) package.
+Statistical metrics help to quantify the agreements between observed and calculated discharges. For example, Ferreira et al. (2020) evaluate 36 OF proposed in the literature and confirm that each metric should be interpreted specifically thinking about the aspects it has been proposed for (e.g. such as for low-flows, high-flows, etc). Also, a set of goodness-of-fit functions for comparison of simulated and observed hydrological time series could be found in the [hydroGOF](https://cran.r-project.org/web/packages/hydroGOF/index.html) R package.
 
 Mono-objective methods solve an optimization problem with a unique objective function as shown above. Hence, they might contain more than one metric using a linear expression of metrics and weights:\
  
@@ -86,7 +86,7 @@ Also, multi-objective optimizations have been tested in hydrological modeling ca
 
 Searching for the set of optimal model parameters might be an overwhelming task. The Shuffle Complex Evolutionary (SCE) algorithm is one of the most popular functions for mono-objective and global automatic calibration of hydrological model parameters. According to Duan et al. (1993), the SCE method is based on a synthesis of four concepts that have proved successful for global optimization: (a) combination of probabilistic and deterministic approaches; (b) clustering; (c) systematic evolution of a complex of points spanning the space, in the direction of global improvement; and (d) competitive evolution.
 
-The following list presents some available functions and packages available in the R language programming:
+The following list presents some functions and packages available in the R language programming for the optimization of hydrological models:
 
 -   [sceua](https://www.rdocumentation.org/packages/rtop/versions/0.6-6/topics/sceua): Mono-objective calibration function using the Shuffle Complex Evolutionary (SCE) algorithm.
 
