@@ -1,6 +1,6 @@
 # Articles
 
--   **Llauca, H.,** Lavado, W., Arestegui, M. Constraining flood forecasting uncertainties throw streamflow data assimilation in the Tropical Andes of Peru: Case of the Vilcanota River Basin. In preparation.
+-   **Llauca, H.,** Lavado, W., Arestegui, M. Constraining flood forecasting uncertainties throw streamflow data assimilation in the Tropical Andes of Peru: Case of the Vilcanota River Basin. Water. Accepted manuscript.
 
 -   **Llauca, H.,** Leon, K., Lavado, W. Construction of a daily streamflow dataset for Peru using a similarity-based regionalization approach and a hybrid modeling framework. Journal of Hydrology: Regional Studies. 2023; 47, 101381. <https://doi.org/10.1016/j.ejrh.2023.101381>.
 
@@ -12,6 +12,7 @@
 
 # Conference papers
 
+-   **Llauca, H.**, Leon, K., Lavado, W., and Felipe, O.: SONICS: A novel in-house development system for detection and forecasting potential river floods in Peru, HEPEX Workshop 2023, Norrköping, Sweden, 13--15 Sep 2023, EGU23-8144, <https://hepex.org.au/a-look-to-the-past-hepex-workshop/>.
 -   **Llauca, H.**, Leon, K., Lavado, W., and Felipe, O.: SONICS: A new Peruvian hydrological dataset of simulated daily streamflow for flood monitoring and forecasting, EGU General Assembly 2023, Vienna, Austria, 24--28 Apr 2023, EGU23-8144, <https://doi.org/10.5194/egusphere-egu23-8144>.
 -   **Llauca, H.**, Lavado, W., Montesinos, C., and Rau, P.: Monthly semi-distributed hydrological model at national scale in Peru, EGU General Assembly 2020, Online, 4--8 May 2020, EGU2020-3769, <https://doi.org/10.5194/egusphere-egu2020-3769>.
 -   Leon, K., Acuña, J., **Llauca, H.**, Lavado, W., Suarez, W., Ordoñez, J., and Felipe, O. : Implementation of a flood forecasting system in a transboundary river basin, Peru -- Ecuador , EGU General Assembly 2020, Online, 4--8 May 2020, EGU2020-12927, <https://doi.org/10.5194/egusphere-egu2020-12927>.
@@ -20,8 +21,8 @@
 
 # Others studies
 
--   **Llauca Soto, H.** (2023). Asimilación de caudales observados en la modelación hidrológica subdiaria del río Vilcanota en la estación Pisac. Available in <https://hdl.handle.net/20.500.12542/2613>.
+-   **Llauca Soto, H.** (2023). Asimilación de caudales observados en la modelación hidrológica subdiaria del río Vilcanota en la estación Pisac. Available at <https://hdl.handle.net/20.500.12542/2613>.
 
--   **Llauca Soto, H.** (2018). Exploración del sensoramiento remoto en el rango de las microondas y su relación con el equivalente de agua nieve en los Andes Centrales de Chile. Available in [https://repositorio.uchile.cl/handle/2250/167759](#0).
+-   **Llauca Soto, H.** (2018). Exploración del sensoramiento remoto en el rango de las microondas y su relación con el equivalente de agua nieve en los Andes Centrales de Chile. Available at [https://repositorio.uchile.cl/handle/2250/167759](#0).
 
--   **Llauca Soto, H.** (2014). Estudio del balance hídrico superficial de las cuencas del Anya y del Mchique, departamento de Junín - Perú. Available in [http://repositorio.lamolina.edu.pe/handle/20.500.12996/1833](#0).
+-   **Llauca Soto, H.** (2014). Estudio del balance hídrico superficial de las cuencas del Anya y del Mchique, departamento de Junín - Perú. Available at [http://repositorio.lamolina.edu.pe/handle/20.500.12996/1833](#0).

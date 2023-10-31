@@ -21,6 +21,12 @@ share:
   email: true
 ---
 
+# **Impacto del Cambio Climático sobre los Recursos Hídricos - Noviembre 2023 \[Open\]**
+
+Este curso-taller pretende abordar el entendimiento de los conceptos sobre climatología y sus procesos a escala del Perú, El Fenómeno El Niño, modelos climáticos, estado actual del cambio climático a nivel nacional, métodos de downscalling para utilizar los modelos GCM, ejemplos de aplicación de escenarios de cambio climático en el Perú; y utilizar los modelos GCM para evaluar su impacto sobre la hidrología en el Perú basado en un modelo hidrológico semi-distribuido. Más información [aquí](https://drive.google.com/file/d/1Jp_x30mzJzt7oeuVMETWYAL0ODtHc6Y_/view).
+
+![](images/Curso_PDRH.PNG){width="400"}
+
 # **R aplicado a la Hidrología - Abril & Julio 2023 \[Closed\]**
 
 Curso-taller de entrenamiento en el lenguaje de programación R con aplicaciones en la Hidrología (introducción al lenguaje R, lectura y visualizacíon de datos, manejo de datos climáticos grillados, evaluación y modelación hidrológica).

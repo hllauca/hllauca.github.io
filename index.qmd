@@ -5,9 +5,6 @@ about:
   image-shape: rounded
   image-width: 15em
   links:
-    - text: Phone
-      icon: whatsapp
-      href: https://wa.me/+51954301911
     - text: Email
       icon: envelope
       href: mailto:hllauca@gmail.com
@@ -27,9 +24,9 @@ about:
 
 ## Welcome!
 
-Thanks for visit my personal website. I am a professional in water resources with experience in the analysis and modeling of hydrological processes, development of short- and long-term streamflow forecasts, runoff prediction in ungauged basins, satellite precipitation products' applications, climate change impacts on catchment hydrology, and hydroinformatic applications.
+Thanks for visiting my website. I am a professional in water resources with experience in the analysis and modeling of hydrological processes, development of short- and long-term streamflow forecasts, runoff prediction in ungauged basins, satellite precipitation products' applications, climate change impacts on catchment hydrology, and hydroinformatic applications.
 
-My recent work are focused on develop new climate services that support detection and prediction of extreme hydrological hazards in Peru.
+My recent work is focused on developing new climate services that support the detection and prediction of extreme hydrological hazards in Peru.
 
 ------------------------------------------------------------------------
 
