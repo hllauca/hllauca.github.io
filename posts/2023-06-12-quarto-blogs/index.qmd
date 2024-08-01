@@ -56,13 +56,13 @@ minOF = minRMSE = min(\sqrt{\frac{1}{n}\sum_{i}^{n}\left ( Y_{sim,i} - Y_{obs,i}
 $$
 
 \
-There are other statistical metrics used in model calibration such as the popular Nash-Sutcliffe (*NSE*) or the Kling and Gupta (*KGE*) efficiency criterion. In both cases, higher values near 1 indicate a very good adjustment of simulations to observations, so the *OF* should be expressed as a maximization problem or a minimization problem of the negative metrics as follows:\
+There are other statistical metrics used in model calibration such as the popular Nash-Sutcliffe (*NSE*) or the Kling and Gupta (*KGE*) efficiency criterion. In both cases, higher values near 1 indicate a very good adjustment of simulations to observations, so the *OF* should be expressed as a maximization problem as follows:\
   $$
-maxNSE = min(-1*NSE) = min(\frac{\sum_{i=1}^{n}(Y_{sim,i}-Y_{obs,i})^2}{\sum_{i=1}^{n}(Y_{obs,i}-\bar{Y_{obs}})^2})
+maxNSE = max(1-\frac{\sum_{i=1}^{n}(Y_{sim,i}-Y_{obs,i})^2}{\sum_{i=1}^{n}(Y_{obs,i}-\bar{Y_{obs}})^2})
 $$\
 
 $$
-maxKGE = min(-1*KGE) = min(\sqrt{(r-1)^2+(\frac{\sigma _{sim}}{\sigma _{obs}}-1)^2+(\frac{\mu _{sim}}{\mu _{obs}}-1)^2})
+maxKGE = max(1-\sqrt{(r-1)^2+(\frac{\sigma _{sim}}{\sigma _{obs}}-1)^2+(\frac{\mu _{sim}}{\mu _{obs}}-1)^2})
 $$
 
 \
@@ -72,7 +72,7 @@ Mono-objective methods solve an optimization problem with a unique objective fun
  
 
 $$
-minOF = a*RMSE - b*NSE - c*KGE
+minOF = a*RMSE + b*(1-NSE) + c*(1-KGE)
 $$
 
 \
