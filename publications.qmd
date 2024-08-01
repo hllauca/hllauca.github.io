@@ -1,5 +1,7 @@
 # Articles
 
+-   **Llauca, H.,** Lavado, W.. Evaluation of the relationship between ENSO and streamflow variability in Peruvian catchments. In preparation.
+
 -   **Llauca, H.,** Lavado, W., Arestegui, M. Constraining flood forecasting uncertainties throw streamflow data assimilation in the Tropical Andes of Peru: Case of the Vilcanota River Basin. Water. 2023; 15(22), 3944. <https://doi.org/10.3390/w15223944>.
 
 -   **Llauca, H.,** Leon, K., Lavado, W. Construction of a daily streamflow dataset for Peru using a similarity-based regionalization approach and a hybrid modeling framework. Journal of Hydrology: Regional Studies. 2023; 47, 101381. <https://doi.org/10.1016/j.ejrh.2023.101381>.
@@ -24,6 +26,8 @@
 -   **Llauca Soto, H.** (2023). Asimilación de caudales observados en la modelación hidrológica subdiaria del río Vilcanota en la estación Pisac. Available at <https://hdl.handle.net/20.500.12542/2613>.
 
 -   **Llauca Soto, H.** (2023). Asimilación de caudales observados en la modelación hidrológica subdiaria del río Vilcanota en la estación Pisac. Available at <https://hdl.handle.net/20.500.12542/2613>.
+
+-   Cornejo Ruiz, C., **Llauca Soto, H.** (2022). Aplicación de productos de precipitación estimada por satélite en la representación de la respuesta hidrológica de la cuenca Puyango. Available at <https://repositorio.untumbes.edu.pe/handle/20.500.12874/64626>.
 
 -   **Llauca Soto, H.** (2018). Exploración del sensoramiento remoto en el rango de las microondas y su relación con el equivalente de agua nieve en los Andes Centrales de Chile. Available at [https://repositorio.uchile.cl/handle/2250/167759](#0).
 
