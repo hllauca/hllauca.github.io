@@ -14,7 +14,7 @@ about:
       href: mailto:hllauca@gmail.com
     - text: LinkedIn
       icon: linkedin
-      href: https://www.linkedin.com/in/harold-llauca/
+      href: https://www.linkedin.com/in/hllauca/
     - text: GitHub
       icon: github
       href: https://github.com/hllauca
