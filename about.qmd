@@ -8,7 +8,7 @@ My work combines hydrological modeling, Earth observation, geomatics, and data s
 
 ## Current roles
 
-- Researcher in Hydrology, National Service of Meteorlogy and Hydrology of Peru (SENAMHI), Peru.
+- Researcher in Hydrology, National Service of Meteorology and Hydrology of Peru (SENAMHI), Peru.
 - PhD candidate in Water Resources, National Agrarian University La Molina (UNALM), Peru.
 - Lecturer, Master's Programme in Hydraulics, National University of Engineering (UNI), Peru.
 - Lecturer, Department of Civil and Environmental Engineering, University of Engineering and Technology (UTEC), Peru.
@@ -22,7 +22,6 @@ My work combines hydrological modeling, Earth observation, geomatics, and data s
 - Hydroclimatic datasets and reproducible workflows
 - Climate variability and change impacts on water resources
 
-
 ## Selected projects
 
 - Climate change analysis in the influence area of the Las Bambas Mine Tailings Storage Facility.
@@ -33,6 +32,6 @@ My work combines hydrological modeling, Earth observation, geomatics, and data s
 
 ## Education
 
-- PhD candidate in Water Resources, Universidad Nacional Agraria La Molina, Peru.
-- MSc in Water and Environmental Resources, Universidad Nacional Agraria La Molina, Peru.
-- Agricultural Engineer, Universidad Nacional Agraria La Molina, Peru.
+- PhD candidate in Water Resources, National Agrarian University La Molina, Peru.
+- MSc in Engineering Sciences, mention in Water Resources and Environment, University of Chile, Chile.
+- Agricultural Engineer, National Agrarian University La Molina, Peru.

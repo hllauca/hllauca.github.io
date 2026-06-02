@@ -1,7 +1,9 @@
 ---
 title: ""
+pagetitle: "Harold Llauca | Hydrological Modeling, Forecasting & Water Resources"
 image: foto_perfil.jpeg
 toc: false
+description: "Hydrologist and water resources engineer developing hydrological datasets, forecasting systems, and decision-support tools for Peru."
 about: 
   template: trestles
   image-shape: rounded
@@ -28,11 +30,12 @@ about:
 
 ## Hydrological Modeling, Forecasting & Water Resources
 
-Welcome!
+I build hydrological datasets, models, and operational forecasting systems that support flood and drought monitoring, climate services, and water resources decisions in Peru.
 
-I am a hydrologist and water resources engineer focused on hydrological modeling, climate services, hydroinformatics, and operational forecasting systems in Peru.
+My work combines hydrological modeling, Earth observation, geomatics, and data science to transform hydroclimatic information into reproducible products and decision-support tools.
 
-My work involves developing datasets, models, and decision-support tools to monitor and forecast floods, droughts, and climate-related hydrological risks. I combine hydrological modeling, Earth observation, geomatics, and data science to support water resources management and informed decision-making.
+[View publications](publications.qmd){.btn .btn-primary}
+[Read profile](about.qmd){.btn .btn-outline-primary}
 
 ## Featured Work
 
@@ -61,5 +64,13 @@ A large-sample hydrological dataset for Peruvian catchments, designed to support
 National-scale hydrological dataset of daily streamflow simulations for Peru, developed using gridded hydroclimatic data and hydrological modeling.
 
 [View dataset](https://www.hydroshare.org/resource/f723d6c762ca45b6936dd9489bc44842/){.project-link}
+:::
+
+::: {.g-col-12 .project-card}
+### PISCO-GR2M
+
+National-scale hydrological dataset of monthly streamflow simulations for Peru, developed using gridded hydroclimatic data and monthly hydrological modeling.
+
+[View dataset](https://www.hydroshare.org/resource/f1b537f338f24533af5dab946b51d215/){.project-link}
 :::
 ::::::

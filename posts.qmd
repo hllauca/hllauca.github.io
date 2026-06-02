@@ -1,4 +1,6 @@
 ---
+title: "Blog"
+description: "Posts, notes, and training materials on hydrological modeling, climate services, data science, and water resources."
 listing: 
   contents: posts # all Quarto docs in the `posts` directory will be included on your listing page
   type: default # or `default` or `table`; each type has its own set of yaml options to include

@@ -1,12 +1,12 @@
 ---
-title: "Training courses"
-description: "You can check here my available training courses on some hydrology topics (dictados en español)."
+title: "Past training courses"
+description: "A selection of past training courses on hydrology, climate change, hydrological modeling, and R programming, taught in Spanish."
 author:
   - name: Harold Llauca
     url: https://hllauca.github.io/
     orcid: 0000-0001-7462-2548
 date: 05-15-2023
-categories: [Peru, R programming, Data-Science, Hydrological Modeling, Climate Change] # self-defined categories
+categories: [Peru, R Programming, Data Science, Hydrological Modeling, Climate Change] # self-defined categories
 citation: 
   url: https://hllauca.github.io/posts/2023-05-15-quarto-blogs/ 
 image: courses.jpeg
@@ -21,25 +21,25 @@ share:
   email: true
 ---
 
-# **Impacto del Cambio Climático sobre los Recursos Hídricos - Noviembre 2023 \[Open\]**
+## **Impacto del Cambio Climático sobre los Recursos Hídricos - Noviembre 2023 \[Closed\]**
 
 Este curso-taller pretende abordar el entendimiento de los conceptos sobre climatología y sus procesos a escala del Perú, El Fenómeno El Niño, modelos climáticos, estado actual del cambio climático a nivel nacional, métodos de downscalling para utilizar los modelos GCM, ejemplos de aplicación de escenarios de cambio climático en el Perú; y utilizar los modelos GCM para evaluar su impacto sobre la hidrología en el Perú basado en un modelo hidrológico semi-distribuido. Más información [aquí](https://drive.google.com/file/d/1Jp_x30mzJzt7oeuVMETWYAL0ODtHc6Y_/view).
 
 ![](images/Curso_PDRH.PNG){width="400"}
 
-# **R aplicado a la Hidrología - Abril & Julio 2023 \[Closed\]**
+## **R aplicado a la Hidrología - Abril & Julio 2023 \[Closed\]**
 
 Curso-taller de entrenamiento en el lenguaje de programación R con aplicaciones en la Hidrología (introducción al lenguaje R, lectura y visualizacíon de datos, manejo de datos climáticos grillados, evaluación y modelación hidrológica).
 
 ![](images/r_curso.png){fig-align="center" width="500"}
 
-# Introducción a la modelación hidrológica estacional aplicando el modelo semidistribuido GR2M - Diciembre 2022 **\[Closed**\]
+## Introducción a la modelación hidrológica estacional aplicando el modelo semidistribuido GR2M - Diciembre 2022 **\[Closed\]**
 
 Curso-taller de entrenamiento en el modelo conceptual GR2M, aplicando el paquete GR2MSemiDistr en la simulación hidrológica de caudales medios mensuales aplicando el lenguaje de programación R.
 
 ![](images/gr2m_curso.png){fig-align="center" width="500"}
 
-# Modelos de Cambio Climático para la Evaluación de la Disponibilidad Hídrica Futura - Noviembre 2018 \[Closed\]
+## Modelos de Cambio Climático para la Evaluación de la Disponibilidad Hídrica Futura - Noviembre 2018 \[Closed\]
 
 Curso-taller de entrenamiento en la descarga, post-procesamiento, escalamiento estadístico y corrección del sesgo de Modelos Climáticos Globales del CMIP5, y su aplicación en la hidrología de cuencas.
 

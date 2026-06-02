@@ -4,7 +4,13 @@ project:
 
 website:
   title: "Harold Llauca"
+  site-url: "https://hllauca.github.io"
+  description: "Hydrologist and water resources engineer focused on hydrological modeling, forecasting systems, climate services, and hydroinformatics in Peru."
   favicon: rocket-takeoff-fill.svg
+  open-graph:
+    image: foto_perfil.jpeg
+  twitter-card:
+    image: foto_perfil.jpeg
 
   navbar:
     left:
@@ -24,6 +30,7 @@ format:
   html:
     theme: cosmo
     css: styles.css
+    lang: en
     toc: true
     toc-location: right
     smooth-scroll: true
