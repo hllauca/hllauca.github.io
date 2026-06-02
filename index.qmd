@@ -1,5 +1,7 @@
 ---
-image: foto.jfif
+title: ""
+image: foto_perfil.jpeg
+toc: false
 about: 
   template: trestles
   image-shape: rounded
@@ -15,20 +17,49 @@ about:
       icon: github
       href: https://github.com/hllauca
     - text: ResearchGate
-      icon: researchgate
+      icon: link-45deg
       href: https://www.researchgate.net/profile/Harold-Llauca
     - text: Google Scholar
-      icon: google-scholar
+      icon: mortarboard
       href: https://scholar.google.com/citations?user=JfqQNHYAAAAJ&hl=en&oi=ao
 ---
 
-## Welcome!
+# Harold Llauca
 
-Thanks for visiting my website. I am a professional in water resources with experience in the analysis and modeling of hydrological processes, development of short- and long-term streamflow forecasts, runoff prediction in ungauged basins, satellite precipitation products' applications, climate change impacts on catchment hydrology, and hydroinformatic applications.
+## Hydrological Modeling, Forecasting & Water Resources
 
-My recent work is focused on developing new climate services that support the detection and prediction of extreme hydrological hazards in Peru.
+Welcome!
 
-------------------------------------------------------------------------
+I am a hydrologist and water resources engineer focused on hydrological modeling, climate services, hydroinformatics, and operational forecasting systems in Peru.
 
-| **Harold Llauca**
-| Hydrology & Water Resources Engineering
+My work involves developing datasets, models, and decision-support tools to monitor and forecast floods, droughts, and climate-related hydrological risks. I combine hydrological modeling, Earth observation, geomatics, and data science to support water resources management and informed decision-making.
+
+## Featured Work
+
+Selected projects and tools related to hydrological modeling, forecasting, climate services, and hydroinformatics.
+
+:::::: grid
+::: {.g-col-12 .project-card}
+### SONICS
+
+Operational hydrological monitoring and forecasting system for Peru, providing national-scale streamflow simulations, current hydrological conditions, and short-term forecasts.
+
+[View platform](https://www.senamhi.gob.pe/sonics/){.project-link}
+:::
+
+::: {.g-col-12 .project-card}
+### CAMELS-PE
+
+A large-sample hydrological dataset for Peruvian catchments, designed to support hydrological modeling, regionalization, climate impact studies, and data-driven hydrology.
+
+[View dataset](https://doi.org/10.5281/zenodo.20058779){.project-link}
+:::
+
+::: {.g-col-12 .project-card}
+### PISCO-ARNOVIC
+
+National-scale hydrological dataset of daily streamflow simulations for Peru, developed using gridded hydroclimatic data and hydrological modeling.
+
+[View dataset](https://www.hydroshare.org/resource/f723d6c762ca45b6936dd9489bc44842/){.project-link}
+:::
+::::::

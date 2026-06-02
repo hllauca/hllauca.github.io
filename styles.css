@@ -1,1 +1,24 @@
 /* css styles */
+
+.project-card {
+  background: #ffffff;
+  border: 1px solid #e6e9ef;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #2f4f5f;
+}
+
+.project-card p {
+  font-size: 0.94rem;
+  line-height: 1.5;
+  margin-bottom: 0.6rem;
+}

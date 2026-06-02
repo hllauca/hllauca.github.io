@@ -5,6 +5,7 @@ project:
 website:
   title: "Harold Llauca"
   favicon: rocket-takeoff-fill.svg
+
   navbar:
     left:
       - href: index.qmd
@@ -13,16 +14,18 @@ website:
         text: Profile
       - href: publications.qmd
         text: Publications
-      - href: resources.qmd
-        text: Resources
       - href: posts.qmd
         text: Blog
-    page-footer: "Copyright 2023, Harold Llauca"
+
+  page-footer:
+    center: "© 2026 Harold Llauca"
 
 format:
   html:
-    theme: sandstone
+    theme: cosmo
     css: styles.css
     toc: true
+    toc-location: right
+    smooth-scroll: true
 
 editor: visual

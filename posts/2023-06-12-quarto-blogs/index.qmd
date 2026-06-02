@@ -1,22 +1,21 @@
 ---
-title: "How to calibrate hydrological models?"
-description: "Bases for modeling hydrological systems and obtain reliable simulations"
+title: "From Parameters to Reliable Streamflow Simulations: A Guide to Hydrological Model Calibration"
+description: "A practical introduction to single-objective and multi-objective calibration for hydrological modeling"
 author:
   - name: Harold Llauca
     url: https://hllauca.github.io/
     orcid: 0000-0001-7462-2548
-date: 06-12-2023
-categories: [Hydrological Modeling, Data-Science, R programming] # self-defined categories
+date: 2023-06-12
+categories: [Hydrological Modeling, Data Science, R Programming]
 citation: 
   url: https://hllauca.github.io/posts/2023-06-12-quarto-blogs/ 
 image: calibration.jpeg
-draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
-# bibliography: references.bib
+draft: false
 filters:
   - social-share
 share:
   permalink: "https://hllauca.github.io/posts/2023-06-12-quarto-blogs/"
-  description: "How to calibrate hydrological models?"
+  description: "A practical introduction to hydrological model calibration"
   twitter: true
   facebook: true
   reddit: true
@@ -24,59 +23,150 @@ share:
   email: true
 ---
 
-Models aim to represent hydrological systems using different kinds of mathematical simplifications (e.g. physical-based, conceptual, empirical) or spatial discretization approaches (distributed, semi-distributed, lumped). These models are capable of anticipating system response (e.g. in terms of water discharges) from forcing changes (e.g. precipitation). However, system uncertainties are implicit in the model from different sources such as: model forcings (u), parameters (θ), states (X), structure (M), or outputs (Y); as described by Liu & Gupta (2011). What is more, model errors ($\varepsilon$) directly impact streamflow simulation due to propagation throw the model system - from inputs to outputs - as is shown in the following equation, where *t* is the time:\
- $$
-Y_{t} = M(u_{t},X_{t-1},θ, \varepsilon)
+Models aim to represent hydrological systems using different kinds of mathematical simplifications, such as physically based, conceptual, or empirical approaches, as well as different spatial discretization schemes, including distributed, semi-distributed, and lumped models. These models can estimate the hydrological response of a system, commonly expressed in terms of streamflow, from changes in forcing variables such as precipitation.
+
+However, uncertainties are inherent in hydrological modeling and may arise from different sources, including model forcings ($u$), parameters ($\theta$), states ($X$), structure ($M$), and outputs ($Y$), as described by Liu and Gupta (2007). Moreover, model errors ($\varepsilon$) directly affect streamflow simulations because they propagate through the modeling system, from inputs to outputs. This can be represented as follows, where *t* denotes time:
+
+$$
+Y_{t} = M(u_{t}, X_{t-1}, \theta, \varepsilon)
 $$
 
-\
-In that context, model calibration techniques help to reduce parameter uncertainties and improve the streamflow representation.\
+In this context, model calibration techniques help reduce parameter uncertainty and improve the representation of streamflow.
 
 ------------------------------------------------------------------------
 
 ### Model optimization
 
-The main focus of the model optimization procedure is to reduce errors between observed and simulated responses of the hydrological system throw parameter modification as described by Vrugt et al. (2013).
+The main objective of model optimization is to reduce the differences between observed and simulated responses of the hydrological system through parameter adjustment, as described by Vrugt et al. (2013).
 
 ![Schematic overview of the model calibration problem. Source: Vrugt et al. (2013).](images/system.PNG){width="600"}
 
-\
-This objective might be explained by a **minimization problem**, where the cost function *J* represents errors between simulations (*Ysim*) and observations (*Yobs*):\
-\
-$$
-minJ = \varepsilon_{(Ysim - Yobs)}
-$$
-
-\
-The cost function is commonly named the **Objective Function** (*OF*) and *J* might be expressed in terms of some statistical metrics such as the Root Mean Square Error (*RMSE*), where *n* represent the length of the time series and *i* is the time step.\
- 
+This objective can be expressed as a **minimization problem**, where the cost function $J$ represents the error between simulations ($Y_{sim}$) and observations ($Y_{obs}$):
 
 $$
-minOF = minRMSE = min(\sqrt{\frac{1}{n}\sum_{i}^{n}\left ( Y_{sim,i} - Y_{obs,i} \right )^2})
+\min J = \varepsilon(Y_{sim} - Y_{obs})
 $$
 
-\
-There are other statistical metrics used in model calibration such as the popular Nash-Sutcliffe (*NSE*) or the Kling and Gupta (*KGE*) efficiency criterion. In both cases, higher values near 1 indicate a very good adjustment of simulations to observations, so the *OF* should be expressed as a maximization problem as follows:\
-  $$
-maxNSE = max(1-\frac{\sum_{i=1}^{n}(Y_{sim,i}-Y_{obs,i})^2}{\sum_{i=1}^{n}(Y_{obs,i}-\bar{Y_{obs}})^2})
-$$\
+The cost function is commonly referred to as the **objective function** (*OF*). It can be expressed using statistical metrics such as the Root Mean Square Error (*RMSE*), where $n$ represents the length of the time series and $i$ is the time step.
 
 $$
-maxKGE = max(1-\sqrt{(r-1)^2+(\frac{\sigma _{sim}}{\sigma _{obs}}-1)^2+(\frac{\mu _{sim}}{\mu _{obs}}-1)^2})
+\min OF = \min RMSE =
+\min \left(
+\sqrt{
+\frac{1}{n}
+\sum_{i=1}^{n}
+\left(Y_{sim,i} - Y_{obs,i}\right)^2
+}
+\right)
 $$
 
-\
-Statistical metrics help to quantify the agreements between observed and calculated discharges. For example, Ferreira et al. (2020) evaluate 36 OF proposed in the literature and confirm that each metric should be interpreted specifically thinking about the aspects it has been proposed for (e.g. such as for low-flows, high-flows, etc). Also, a set of goodness-of-fit functions for comparison of simulated and observed hydrological time series could be found in the [hydroGOF](https://cran.r-project.org/web/packages/hydroGOF/index.html) R package.
-
-Mono-objective methods solve an optimization problem with a unique objective function as shown above. Hence, they might contain more than one metric using a linear expression of metrics and weights:\
- 
+Other statistical metrics are widely used in model calibration, such as the Nash--Sutcliffe Efficiency (*NSE*) and the Kling--Gupta Efficiency (*KGE*). In both cases, values close to 1 indicate a very good agreement between simulations and observations. Therefore, when these metrics are used as objective functions, the *OF* is commonly formulated as a maximization problem:
 
 $$
-minOF = a*RMSE + b*(1-NSE) + c*(1-KGE)
+\max NSE =
+\max \left(
+1 -
+\frac{
+\sum_{i=1}^{n}
+\left(Y_{sim,i} - Y_{obs,i}\right)^2
+}{
+\sum_{i=1}^{n}
+\left(Y_{obs,i} - \overline{Y}_{obs}\right)^2
+}
+\right)
 $$
 
-\
-Also, multi-objective optimizations have been tested in hydrological modeling calibration to include more than a unique objective function with a Pareto optimization approach. For instance, Yeste et al. (2023) compare multi- and mono-objective calibration algorithms to integrate streamflow (Q) and evaporation (E) data in hydrological modeling.
+$$
+\max KGE =
+\max \left(
+1 -
+\sqrt{
+(r - 1)^2 +
+\left(\frac{\sigma_{sim}}{\sigma_{obs}} - 1\right)^2 +
+\left(\frac{\mu_{sim}}{\mu_{obs}} - 1\right)^2
+}
+\right)
+$$
+
+Statistical metrics help quantify the agreement between observed and simulated discharges. For example, Ferreira et al. (2020) evaluated 36 objective functions proposed in the literature and confirmed that each metric should be interpreted according to the specific aspect it was designed to assess, such as low flows, high flows, timing, or overall performance. In R, several goodness-of-fit functions for comparing simulated and observed hydrological time series are available in the [hydroGOF](https://cran.r-project.org/web/packages/hydroGOF/index.html) package.
+
+### Single-objective and multi-objective calibration
+
+Hydrological model calibration can be performed using either a **single-objective** or a **multi-objective** approach.
+
+In **single-objective calibration**, the optimization process is guided by one objective function. This objective function may be a single performance metric, such as RMSE, NSE, or KGE, or a weighted combination of several metrics. The aim is to identify one parameter set that provides the best overall performance according to the selected criterion.
+
+For example, a single-objective function may combine different metrics as follows:
+
+$$
+\min OF(\theta) =
+a \cdot RMSE(\theta) +
+b \cdot (1 - NSE(\theta)) +
+c \cdot (1 - KGE(\theta))
+$$
+
+where $\theta$ represents the model parameter set, and $a$, $b$, and $c$ are weights assigned to each metric. This approach is useful when the modeler has a clear priority, such as reducing peak-flow errors, improving the overall water balance, or maximizing agreement between observed and simulated streamflow.
+
+However, hydrological models often need to represent several aspects of catchment behavior at the same time. For instance, a model may reproduce high flows well but perform poorly during low-flow periods, or it may capture the water balance but fail to represent flood peaks accurately.
+
+In these cases, **multi-objective calibration** can be more appropriate. Instead of optimizing a single objective function, the calibration problem is formulated as the simultaneous optimization of several objective functions:
+
+$$
+\min F(\theta) =
+\left[
+f_1(\theta), f_2(\theta), \ldots, f_m(\theta)
+\right]
+$$
+
+where $F(\theta)$ is a vector of objective functions, $m$ is the number of objectives, and each $f_j(\theta)$ evaluates a specific aspect of model performance.
+
+For example, a multi-objective calibration problem may seek to minimize errors in high flows, low flows, and water balance simultaneously:
+
+$$
+\min F(\theta) =
+\left[
+RMSE_{high}(\theta),
+RMSE_{low}(\theta),
+|PBIAS(\theta)|
+\right]
+$$
+
+Alternatively, when using efficiency metrics that should be maximized, such as NSE and KGE, the problem can be transformed into a minimization problem as follows:
+
+$$
+\min F(\theta) =
+\left[
+1 - NSE(\theta),
+1 - KGE(\theta),
+|PBIAS(\theta)|
+\right]
+$$
+
+A solution $\theta_a$ is said to dominate another solution $\theta_b$ when it performs at least as well in all objectives and better in at least one objective:
+
+$$
+f_j(\theta_a) \leq f_j(\theta_b) \quad \forall j = 1, \ldots, m
+$$
+
+and
+
+$$
+f_j(\theta_a) < f_j(\theta_b) \quad \text{for at least one objective } j
+$$
+
+The set of non-dominated solutions forms the **Pareto front**. These solutions represent trade-offs between competing objectives. In other words, improving one objective would lead to the deterioration of at least one other objective.
+
+For example, a calibration strategy may seek to improve both streamflow ($Q$) and evaporation ($E$) simulations, as discussed by Yeste et al. (2023):
+
+$$
+\min F(\theta) =
+\left[
+OF_Q(\theta),
+OF_E(\theta)
+\right]
+$$
+
+where $OF_Q(\theta)$ measures the error in streamflow simulations and $OF_E(\theta)$ measures the error in evaporation simulations. This type of approach is especially useful when the model is intended to support multiple applications, such as flood forecasting, drought analysis, water balance assessment, or climate impact studies.
 
 ![Multi-objective calibration. Source: Yeste et al. (2023).](images/multiobjective-01.PNG){width="400"}
 
@@ -84,36 +174,37 @@ Also, multi-objective optimizations have been tested in hydrological modeling ca
 
 ### Optimization algorithms
 
-Searching for the set of optimal model parameters might be an overwhelming task. The Shuffle Complex Evolutionary (SCE) algorithm is one of the most popular functions for mono-objective and global automatic calibration of hydrological model parameters. According to Duan et al. (1993), the SCE method is based on a synthesis of four concepts that have proved successful for global optimization: (a) combination of probabilistic and deterministic approaches; (b) clustering; (c) systematic evolution of a complex of points spanning the space, in the direction of global improvement; and (d) competitive evolution.
+Searching for the optimal set of model parameters can be a challenging task. The Shuffled Complex Evolution algorithm, commonly known as SCE-UA, is one of the most popular methods for single-objective and global automatic calibration of hydrological model parameters. According to Duan et al. (1993), the SCE-UA method is based on a synthesis of four concepts that have proven successful for global optimization: (a) a combination of probabilistic and deterministic approaches; (b) clustering; (c) systematic evolution of a complex of points spanning the parameter space in the direction of global improvement; and (d) competitive evolution.
 
-The following list presents some functions and packages available in the R language programming for the optimization of hydrological models:
+The following list presents some functions and packages available in R for the optimization of hydrological models:
 
--   [sceua](https://www.rdocumentation.org/packages/rtop/versions/0.6-6/topics/sceua): Mono-objective calibration function using the Shuffle Complex Evolutionary (SCE) algorithm.
+- [sceua](https://www.rdocumentation.org/packages/rtop/versions/0.6-6/topics/sceua): single-objective calibration function using the Shuffled Complex Evolution algorithm.
 
--   [hydroPSO](https://www.rdocumentation.org/packages/hydroPSO/versions/0.3-1-1/topics/hydroPSO): Enhanced Particle Swarm Optimisation (PSO) algorithm.
+- [hydroPSO](https://www.rdocumentation.org/packages/hydroPSO/versions/0.3-1-1/topics/hydroPSO): enhanced Particle Swarm Optimization (PSO) algorithm.
 
--   [ga](https://www.rdocumentation.org/packages/GA/versions/3.2.3/topics/ga): Maximization of a fitness function using Genetic Algorithms (GA).
+- [ga](https://www.rdocumentation.org/packages/GA/versions/3.2.3/topics/ga): maximization of a fitness function using Genetic Algorithms (GA).
 
--   [dream](https://r-forge.r-project.org/projects/dream): DiffeRential Evolution Adaptive Metropolis (DREAM). Efficient global MCMC even in high-dimensional spaces.
+- [dream](https://r-forge.r-project.org/projects/dream): DiffeRential Evolution Adaptive Metropolis (DREAM), an efficient global MCMC algorithm even in high-dimensional spaces.
 
--   [nsga2R](https://www.rdocumentation.org/packages/nsga2R/versions/1.1/topics/nsga2R): Multi-objective calibration with the R Based Non-dominated Sorting Genetic Algorithm II.
+- [nsga2R](https://www.rdocumentation.org/packages/nsga2R/versions/1.1/topics/nsga2R): multi-objective calibration using the R-based Non-dominated Sorting Genetic Algorithm II.
 
--   [rmoo](https://cran.r-project.org/web/packages/rmoo/index.html): Framework for multi- and many-objective optimization, which allows researchers and users versatility in parameter configuration, as well as tools for analysis, replication, and visualization of results.
+- [rmoo](https://cran.r-project.org/web/packages/rmoo/index.html): framework for multi-objective and many-objective optimization, providing flexibility in parameter configuration, as well as tools for analysis, replication, and visualization of results.
 
--   [caRamel](https://github.com/fzao/caRamel): R package for optimization implementing a multiobjective evolutionary algorithm combining the MEAS algorithm and the NGSA-II algorithm.
+- [caRamel](https://github.com/fzao/caRamel): R package for optimization implementing a multi-objective evolutionary algorithm that combines the MEAS algorithm and the NSGA-II algorithm.
 
--   [GPareto](https://cran.r-project.org/web/packages/GPareto/index.html): Multi-objective Expected Improvement and Step-wise Uncertainty Reduction sequential infill criteria.\
-    \
+- [GPareto](https://cran.r-project.org/web/packages/GPareto/index.html): package for multi-objective optimization using Expected Improvement and Step-wise Uncertainty Reduction sequential infill criteria.
 
 ------------------------------------------------------------------------
 
-### Calibration or validation?
+### Calibration and validation
 
-Hydrological models require the development of two main steps before their operation. The **calibration** step consists of the selection of a window period where optimal model parameters are identified throw the procedure described lines above, while the **validation** step is about the use of these optimal parameters set in a new non-tested time window. In that sense, the assessment of model performance - using different statistical metrics - is computed during calibration and validation periods.\
+Hydrological models usually require two main steps before operational implementation: calibration and validation. The **calibration** step consists of selecting a time window in which optimal model parameters are identified through the procedure described above. The **validation** step consists of applying this optimal parameter set to a different, independent time window that was not used during calibration.
+
+In this sense, model performance is assessed during both calibration and validation periods using different statistical metrics.
 
 ![Calibrated and validated streamflow time series in a lumped hydrological model.](images/model_calib.PNG){fig-align="center" width="500"}
 
-The **warm-up** period is a previous step inside the model calibration used to reduce initial condition uncertainties. For instance, in daily models, the first-year calibration model period is discarded from the OF and statistical performance metrics to make model outputs independent from initial model states.\
+The **warm-up** period is an additional step commonly used in model calibration to reduce uncertainty related to initial conditions. For instance, in daily models, the first year of the calibration period is often discarded from the objective function and statistical performance metrics to make model outputs less dependent on the initial model states.
 
 ------------------------------------------------------------------------
 
@@ -127,6 +218,4 @@ Liu, Yuqiong, and Hoshin V. Gupta. 2007. "Uncertainty in Hydrologic Modeling: To
 
 Vrugt, Jasper A., Cajo J. F. ter Braak, Cees G. H. Diks, and Gerrit Schoups. 2013. "Hydrologic Data Assimilation Using Particle Markov Chain Monte Carlo Simulation: Theory, Concepts and Applications." *Advances in Water Resources* 51 (January): 457--78. <https://doi.org/10.1016/j.advwatres.2012.04.002>.
 
-Yeste, Patricio, Lieke A. Melsen, Matilde García-Valdecasas Ojeda, Sonia R. Gámiz-Fortis, Yolanda Castro-Díez, and María Jesús Esteban-Parra. 2023. "A Pareto‐based Sensitivity Analysis and Multiobjective Calibration Approach for Integrating Streamflow and Evaporation Data." *Water Resources Research* 59 (6). <https://doi.org/10.1029/2022wr033235>.
-
-\
+Yeste, Patricio, Lieke A. Melsen, Matilde García-Valdecasas Ojeda, Sonia R. Gámiz-Fortis, Yolanda Castro-Díez, and María Jesús Esteban-Parra. 2023. "A Pareto-Based Sensitivity Analysis and Multiobjective Calibration Approach for Integrating Streamflow and Evaporation Data." *Water Resources Research* 59 (6). <https://doi.org/10.1029/2022WR033235>.

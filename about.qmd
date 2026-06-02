@@ -1,33 +1,38 @@
-# Education
+---
+title: "Profile"
+---
 
--   **PhD. Student in Water Resources** \| National Agrarian University La Molina \| Postgraduate School. 2022.
+I am a hydrologist and water resources engineer with experience in hydrological modeling, hydroclimatic data analysis, streamflow forecasting, drought and flood monitoring, and climate services.
 
--   **MSc. in Water and Environmental Resources** \| University of Chile \| Faculty of Physics and Mathematics Sciences \| Department of Civil Engineering. 2018.
+My work combines hydrological modeling, Earth observation, geomatics, and data science to develop operational tools and scientific products for water resources management in Peru.
 
--   **Agricultural Engineer** \| National Agrarian University La Molina \| Faculty of Agricultural Engineering. 2014.
+## Current roles
 
-# Work history
+- Researcher in Hydrology, National Service of Meteorlogy and Hydrology of Peru (SENAMHI), Peru.
+- PhD candidate in Water Resources, National Agrarian University La Molina (UNALM), Peru.
+- Lecturer, Master's Programme in Hydraulics, National University of Engineering (UNI), Peru.
+- Lecturer, Department of Civil and Environmental Engineering, University of Engineering and Technology (UTEC), Peru.
 
--   **Part-time Professor (2023-present)** \| Department of Civil and Environmental Engineering \| University of Engineering and Technology (UTEC).
+## Research interests
 
--   **Researcher in Hydrology (2019-present)** \| National Service of Meteorology and Hydrology of Peru (SENAMHI).
+- Hydrological modeling and forecasting
+- Flood and drought monitoring
+- Climate services and hydroinformatics
+- Hydrological regionalization and ungauged basins
+- Hydroclimatic datasets and reproducible workflows
+- Climate variability and change impacts on water resources
 
--   **Research assistant in Snow Hydrology (2016-2018)** \| Department of Civil Engineering. University of Chile.
 
--   **Hydrologist (2014-2015)** \| National Service of Meteorology and Hydrology of Peru (SENAMHI).
+## Selected projects
 
--   **Fieldworker in Water Resources (2013).** VLIR/UOS-UNALM program.
+- Climate change analysis in the influence area of the Las Bambas Mine Tailings Storage Facility.
+- Characterizing patterns of spatio-temporal variability in snow properties through field and remotely sensed observations.
+- Development of a hydrological forecasting model for the Huallaga River basin to support hydropower scheduling and operational decision-making.
+- Development of national-scale hydrological modeling and forecasting products for Peru.
+- Development of hydroclimatic datasets and reproducible tools for hydrological analysis.
 
-# Areas of interest
+## Education
 
--   Large-sample hydrology
-
--   Hydrological modeling.
-
--   Floods monitoring systems.
-
--   Uncertainties in hydrological forecasting.
-
--   Climate change and water resources.
-
--   Hydroinformatics.
+- PhD candidate in Water Resources, Universidad Nacional Agraria La Molina, Peru.
+- MSc in Water and Environmental Resources, Universidad Nacional Agraria La Molina, Peru.
+- Agricultural Engineer, Universidad Nacional Agraria La Molina, Peru.
