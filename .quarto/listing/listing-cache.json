@@ -1,5 +1,8 @@
 {
   "listingMap": {
+    "es\\posts.qmd": [
+      "../posts"
+    ],
     "posts.qmd": [
       "posts"
     ]

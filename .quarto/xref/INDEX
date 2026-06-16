@@ -22,5 +22,17 @@
   },
   "posts/2023-06-12-quarto-blogs/index.qmd": {
     "index.html": "4a4a834b"
+  },
+  "es/about.qmd": {
+    "about.html": "a3f8f799"
+  },
+  "es/index.qmd": {
+    "index.html": "e64e7e4b"
+  },
+  "es/publications.qmd": {
+    "publications.html": "d068ce38"
+  },
+  "es/posts.qmd": {
+    "posts.html": "3ff2a0c5"
   }
 }

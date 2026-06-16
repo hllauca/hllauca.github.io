@@ -5,6 +5,10 @@ description: "Articles, conference papers, theses, and studies by Harold Llauca 
 
 ## Articles
 
+- **Llauca, H.**, Lavado-Casimiro, W. Hydrological responses to ENSO variability across Peruvian catchments. *Hydrological Sciences Journal*. 2026. [DOI](https://doi.org/10.1080/02626667.2026.2674775).
+
+- **Llauca, H.**, Millan-Arancibia, C., Endara, S., Marques da Silva, R., Moura Brasil Neto, R., Guimarães Santos, C. A. Benchmarking meteorological drought exposure across Peru using the NIFT index. *Hydrological Sciences Journal*. 2026. [DOI](https://doi.org/10.1080/02626667.2026.2673179).
+
 - Gutierrez, L., Huerta, A., **Llauca, H.**, Bourrel, L., Lavado-Casimiro, W. Assessment of run-of-river and hydropower plants in Peru: Current and potential sites, historical variability (1981--2020), and climate change projections (2035--2100). *Climate*. 2025; 13(6), 125. [DOI](https://doi.org/10.3390/cli13060125).
 
 - **Llauca, H.**, Lavado, W., Arestegui, M. Constraining flood forecasting uncertainties through streamflow data assimilation in the Tropical Andes of Peru: Case of the Vilcanota River Basin. *Water*. 2023; 15(22), 3944. [DOI](https://doi.org/10.3390/w15223944).

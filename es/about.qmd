@@ -1,0 +1,41 @@
+---
+title: "Perfil"
+description: "Perfil profesional de Harold Llauca, hidrólogo e ingeniero de recursos hídricos enfocado en modelación hidrológica, pronóstico, servicios climáticos e hidroinformática."
+format:
+  html:
+    lang: es
+---
+
+Soy hidrólogo e ingeniero de recursos hídricos con experiencia en modelación hidrológica, análisis de datos hidroclimáticos, pronóstico de caudales, monitoreo de sequías e inundaciones, y servicios climáticos.
+
+Mi trabajo combina modelación hidrológica, observación de la Tierra, geomática y ciencia de datos para desarrollar herramientas operacionales y productos científicos para la gestión de los recursos hídricos en el Perú.
+
+## Roles actuales
+
+- Investigador en Hidrología, Servicio Nacional de Meteorología e Hidrología del Perú (SENAMHI), Perú.
+- Candidato a doctor en Recursos Hídricos, Universidad Nacional Agraria La Molina (UNALM), Perú.
+- Docente, Maestría en Hidráulica, Universidad Nacional de Ingeniería (UNI), Perú.
+- Docente, Departamento de Ingeniería Civil y Ambiental, Universidad de Ingeniería y Tecnología (UTEC), Perú.
+
+## Intereses de investigacion
+
+- Modelación y pronóstico hidrológico
+- Monitoreo de inundaciones y sequías
+- Servicios climáticos e hidroinformática
+- Regionalización hidrológica y cuencas no aforadas
+- Datasets hidroclimáticos y flujos de trabajo reproducibles
+- Impactos de la variabilidad y el cambio climático en los recursos hídricos
+
+## Proyectos seleccionados
+
+- Análisis de cambio climático en el área de influencia del depósito de relaves de la mina Las Bambas.
+- Caracterización de patrones de variabilidad espacio-temporal en propiedades de nieve mediante observaciones de campo y sensores remotos.
+- Desarrollo de un modelo de pronóstico hidrológico para la cuenca del río Huallaga orientado a la programación hidroenergética y toma de decisiones operacionales.
+- Desarrollo de productos nacionales de modelación y pronóstico hidrológico para el Perú.
+- Desarrollo de datasets hidroclimáticos y herramientas reproducibles para análisis hidrológico.
+
+## Educación
+
+- Candidato a doctor en Recursos Hídricos, Universidad Nacional Agraria La Molina, Perú.
+- Magíster en Ciencias de la Ingeniería, mención Recursos y Medio Ambiente Hídrico, Universidad de Chile, Chile.
+- Ingeniero Agrícola, Universidad Nacional Agraria La Molina, Perú.

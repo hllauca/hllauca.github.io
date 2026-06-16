@@ -34,14 +34,13 @@ I build hydrological datasets, models, and operational forecasting systems that 
 
 My work combines hydrological modeling, Earth observation, geomatics, and data science to transform hydroclimatic information into reproducible products and decision-support tools.
 
-[View publications](publications.qmd){.btn .btn-primary}
-[Read profile](about.qmd){.btn .btn-outline-primary}
+[View publications](publications.qmd){.btn .btn-primary} [Read profile](about.qmd){.btn .btn-outline-primary}
 
 ## Featured Work
 
 Selected projects and tools related to hydrological modeling, forecasting, climate services, and hydroinformatics.
 
-:::::: grid
+::::::: grid
 ::: {.g-col-12 .project-card}
 ### SONICS
 
@@ -73,4 +72,4 @@ National-scale hydrological dataset of monthly streamflow simulations for Peru, 
 
 [View dataset](https://www.hydroshare.org/resource/f1b537f338f24533af5dab946b51d215/){.project-link}
 :::
-::::::
+:::::::

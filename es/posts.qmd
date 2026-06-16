@@ -1,0 +1,12 @@
+---
+title: "Blog"
+description: "Entradas, notas y materiales de capacitación sobre modelación hidrológica, servicios climáticos, ciencia de datos y recursos hídricos."
+format:
+  html:
+    lang: es
+listing:
+  contents: ../posts
+  type: default
+  sort: "date desc"
+  categories: true
+---

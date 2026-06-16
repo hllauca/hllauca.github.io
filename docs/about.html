@@ -108,7 +108,17 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">English</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./es/index.html" rel="" target="">
+ <span class="menu-text">Español</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -194,6 +204,70 @@ ul.task-list li input[type="checkbox"] {
 </section>
 
 </main> <!-- /main -->
+<script>
+(() => {
+  const path = window.location.pathname;
+  const isSpanish = path.includes("/es/");
+  const navLinks = Array.from(document.querySelectorAll(".navbar a.nav-link"));
+
+  let page = path.split("/").pop() || "index.html";
+  if (path.includes("/posts/")) {
+    page = "posts.html";
+  }
+  if (!["index.html", "about.html", "publications.html", "posts.html"].includes(page)) {
+    page = "index.html";
+  }
+
+  const englishHref = isSpanish ? `../${page}` : page;
+  const spanishHref = isSpanish ? page : `es/${page}`;
+
+  const updateByText = (currentText, newText, href) => {
+    navLinks.forEach((link) => {
+      if (link.textContent.trim() === currentText) {
+        const label = link.querySelector(".menu-text");
+        if (label) label.textContent = newText;
+        link.setAttribute("href", href);
+      }
+    });
+  };
+
+  if (isSpanish) {
+    updateByText("Home", "Inicio", "index.html");
+    updateByText("Profile", "Perfil", "about.html");
+    updateByText("Publications", "Publicaciones", "publications.html");
+    updateByText("Blog", "Blog", "posts.html");
+  } else {
+    updateByText("Home", "Home", "index.html");
+    updateByText("Profile", "Profile", "about.html");
+    updateByText("Publications", "Publications", "publications.html");
+    updateByText("Blog", "Blog", "posts.html");
+  }
+
+  updateByText("English", "English", englishHref);
+  updateByText("Español", "Español", spanishHref);
+
+  const prefetched = new Set();
+  const prefetch = (href) => {
+    if (!href || prefetched.has(href)) return;
+    if (href.startsWith("http") || href.startsWith("mailto:") || href.includes("#")) return;
+    prefetched.add(href);
+    const link = document.createElement("link");
+    link.rel = "prefetch";
+    link.href = href;
+    document.head.appendChild(link);
+  };
+
+  navLinks.forEach((link) => {
+    link.addEventListener("mouseenter", () => prefetch(link.getAttribute("href")), { once: true });
+    link.addEventListener("touchstart", () => prefetch(link.getAttribute("href")), { once: true, passive: true });
+  });
+
+  const idle = window.requestIdleCallback || ((callback) => window.setTimeout(callback, 500));
+  idle(() => {
+    navLinks.forEach((link) => prefetch(link.getAttribute("href")));
+  });
+})();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

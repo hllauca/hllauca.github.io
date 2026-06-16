@@ -1,5 +1,9 @@
 [
   {
+    "listing": "/es/posts.html",
+    "items": []
+  },
+  {
     "listing": "/posts.html",
     "items": [
       "/posts/2023-06-12-quarto-blogs/index.html",

@@ -1,0 +1,79 @@
+---
+title: ""
+pagetitle: "Harold Llauca | Modelación Hidrológica, Pronóstico y Recursos Hídricos"
+image: ../foto_perfil.jpeg
+toc: false
+description: "Hidrólogo e ingeniero de recursos hídricos que desarrolla datasets hidrológicos, sistemas de pronóstico y herramientas de apoyo a la decisión para el Perú."
+format:
+  html:
+    lang: es
+about:
+  template: trestles
+  image-shape: rounded
+  image-width: 15em
+  links:
+    - text: Email
+      icon: envelope
+      href: mailto:hllauca@gmail.com
+    - text: LinkedIn
+      icon: linkedin
+      href: https://www.linkedin.com/in/hllauca/
+    - text: GitHub
+      icon: github
+      href: https://github.com/hllauca
+    - text: ResearchGate
+      icon: link-45deg
+      href: https://www.researchgate.net/profile/Harold-Llauca
+    - text: Google Scholar
+      icon: mortarboard
+      href: https://scholar.google.com/citations?user=JfqQNHYAAAAJ&hl=en&oi=ao
+---
+
+# Harold Llauca
+
+## Modelación Hidrológica, Pronóstico y Recursos Hídricos
+
+Desarrollo datasets hidrológicos, modelos y sistemas operacionales de pronóstico que apoyan el monitoreo de inundaciones y sequías, los servicios climáticos y la toma de decisiones sobre recursos hídricos en el Perú.
+
+Mi trabajo combina modelación hidrológica, observación de la Tierra, geomática y ciencia de datos para transformar información hidroclimática en productos reproducibles y herramientas de apoyo a la decisión.
+
+[Ver publicaciones](publications.qmd){.btn .btn-primary}
+[Ver perfil](about.qmd){.btn .btn-outline-primary}
+
+## Trabajo destacado
+
+Proyectos y herramientas seleccionadas relacionadas con modelación hidrológica, pronóstico, servicios climáticos e hidroinformática.
+
+:::::: grid
+::: {.g-col-12 .project-card}
+### SONICS
+
+Sistema operacional de monitoreo y pronóstico hidrológico para el Perú, con simulaciones de caudales a escala nacional, condiciones hidrológicas actuales y pronósticos de corto plazo.
+
+[Ver plataforma](https://www.senamhi.gob.pe/sonics/){.project-link}
+:::
+
+::: {.g-col-12 .project-card}
+### CAMELS-PE
+
+Dataset hidrológico de gran muestra para cuencas peruanas, diseñado para apoyar la modelación hidrológica, regionalización, estudios de impacto climático e hidrología basada en datos.
+
+[Ver dataset](https://doi.org/10.5281/zenodo.20058779){.project-link}
+:::
+
+::: {.g-col-12 .project-card}
+### PISCO-ARNOVIC
+
+Dataset hidrológico nacional de simulaciones diarias de caudal para el Perú, desarrollado con información hidroclimática grillada y modelación hidrológica.
+
+[Ver dataset](https://www.hydroshare.org/resource/f723d6c762ca45b6936dd9489bc44842/){.project-link}
+:::
+
+::: {.g-col-12 .project-card}
+### PISCO-GR2M
+
+Dataset hidrológico nacional de simulaciones mensuales de caudal para el Perú, desarrollado con información hidroclimática grillada y modelación hidrológica mensual.
+
+[Ver dataset](https://www.hydroshare.org/resource/f1b537f338f24533af5dab946b51d215/){.project-link}
+:::
+::::::

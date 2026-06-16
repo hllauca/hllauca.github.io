@@ -22,6 +22,11 @@ website:
         text: Publications
       - href: posts.qmd
         text: Blog
+    right:
+      - href: index.qmd
+        text: English
+      - href: es/index.qmd
+        text: Español
 
   page-footer:
     center: "© 2026 Harold Llauca"
@@ -30,6 +35,7 @@ format:
   html:
     theme: cosmo
     css: styles.css
+    include-after-body: language-switch.html
     lang: en
     toc: true
     toc-location: right
